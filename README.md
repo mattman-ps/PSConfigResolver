@@ -1,4 +1,4 @@
-# ExpandEnvVariables
+# PSConfigResolver
 
 A PowerShell module for reading configuration files (JSON and XML) and expanding environment variables within them.
 
@@ -47,7 +47,7 @@ Get-ExpandedConfig -ConfigFilePath <string> [-Test]
 ```
 Name  UserPath               WinDir     OldUserName
 ----  --------               ------     -----------
-mhilb C:\Users\mhilb/.config C:\windows %DUMMY_VAR%
+mattman-ps C:\Users\mattman-ps/.config C:\windows %DUMMY_VAR%
 ```
 
 ### Expand-JsonConfig (Private)
@@ -166,7 +166,7 @@ $files | ForEach-Object {
 
 ```json
 {
-  "Name": "mhilb",
+  "Name": "mattman-ps",
   "UserPath": "%USERPROFILE%/.config",
   "WinDir": "%WINDIR%",
   "OldUserName": "%DUMMY_VAR%"
@@ -180,7 +180,7 @@ $files | ForEach-Object {
 ```xml
 <?xml version="1.0"?>
 <Config>
-  <Name>mhilb</Name>
+  <Name>mattman-ps</Name>
   <UserPath>%USERPROFILE%/.config</UserPath>
   <WinDir>%WINDIR%</WinDir>
   <OldUserName>%DUMMY_VAR%</OldUserName>
@@ -319,13 +319,6 @@ try {
 ## License
 
 This module is provided as-is for configuration file management purposes.
-
-## Contributing
-
-To improve this module:
-1. Add test cases to `tests\ExpandConfig.tests.ps1`
-2. Update function documentation
-3. Test with various JSON/XML formats
 
 ## Support
 
