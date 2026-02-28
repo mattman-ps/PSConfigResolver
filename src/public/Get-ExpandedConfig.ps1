@@ -55,12 +55,10 @@ function Get-ExpandedConfig {
                 $originalConfig = Get-Content -LiteralPath $ConfigFilePath -Raw | ConvertFrom-Json
                 
                 # Expand environment variables using private function
-                . "$PSScriptRoot\..\private\Expand-JsonConfig.ps1"
                 $config = Expand-JsonConfig -ConfigObject $originalConfig
                 
                 # Run test if requested
                 if ($Test) {
-                    . "$PSScriptRoot\..\private\Test-JsonConfigExpansion.ps1"
                     Test-JsonConfigExpansion -ConfigFilePath $ConfigFilePath -ConfigObject $originalConfig -ExpandedObject $config
                 }
             }
@@ -70,13 +68,11 @@ function Get-ExpandedConfig {
                 $xmlString = Get-Content -LiteralPath $ConfigFilePath -Raw
                 
                 # Expand environment variables using private function
-                . "$PSScriptRoot\..\private\Expand-XmlConfig.ps1"
                 $config = Expand-XmlConfig -XmlString $xmlString
                 
                 # Run test if requested
                 if ($Test) {
                     $expandedString = [System.Environment]::ExpandEnvironmentVariables($xmlString)
-                    . "$PSScriptRoot\..\private\Test-XmlConfigExpansion.ps1"
                     Test-XmlConfigExpansion -ConfigFilePath $ConfigFilePath -OriginalString $xmlString -ExpandedString $expandedString
                 }
             }

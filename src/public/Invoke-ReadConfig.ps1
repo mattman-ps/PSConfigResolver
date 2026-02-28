@@ -55,12 +55,10 @@ function Invoke-ReadConfig {
                 $originalConfig = Get-Content -LiteralPath $ConfigFilePath -Raw | ConvertFrom-Json
                 
                 # Expand environment variables using private function
-                . "$PSScriptRoot\..\private\Invoke-JsonConfigExpansion.ps1"
                 $config = Invoke-JsonConfigExpansion -ConfigObject $originalConfig
                 
                 # Run test if requested
                 if ($Test) {
-                    . "$PSScriptRoot\..\private\Test-JsonConfigExpansion.ps1"
                     Test-JsonConfigExpansion -ConfigFilePath $ConfigFilePath -ConfigObject $originalConfig -ExpandedObject $config
                 }
             }
@@ -70,13 +68,11 @@ function Invoke-ReadConfig {
                 $xmlString = Get-Content -LiteralPath $ConfigFilePath -Raw
                 
                 # Expand environment variables using private function
-                . "$PSScriptRoot\..\private\Invoke-XmlConfigExpansion.ps1"
                 $config = Invoke-XmlConfigExpansion -XmlString $xmlString
                 
                 # Run test if requested
                 if ($Test) {
                     $expandedString = [System.Environment]::ExpandEnvironmentVariables($xmlString)
-                    . "$PSScriptRoot\..\private\Test-XmlConfigExpansion.ps1"
                     Test-XmlConfigExpansion -ConfigFilePath $ConfigFilePath -OriginalString $xmlString -ExpandedString $expandedString
                 }
             }
