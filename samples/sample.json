@@ -1,0 +1,6 @@
+{
+  "Name": "%USERNAME%",
+  "UserPath": "%USERPROFILE%/.config",
+  "WinDir": "%SystemRoot%",
+  "OldUserName": "%DUMMY_VAR%"
+}

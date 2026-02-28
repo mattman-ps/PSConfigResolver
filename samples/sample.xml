@@ -1,0 +1,5 @@
+<Config>
+  <Name>%USERNAME%</Name>
+  <UserPath>%USERPROFILE%/.config</UserPath>
+  <WinDir>%SystemRoot%</WinDir>
+</Config>
