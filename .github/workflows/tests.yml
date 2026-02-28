@@ -1,0 +1,38 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        shell: pwsh
+        run: |
+          Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser
+          Install-Module -Name ModuleTools -Force -SkipPublisherCheck -Scope CurrentUser
+
+      - name: Build Module
+        shell: pwsh
+        run: |
+          Invoke-MTBuild
+
+      - name: Run Pester Tests
+        shell: pwsh
+        run: |
+          $config = New-PesterConfiguration
+          $config.Run.Path = "tests"
+          $config.Run.Exit = $true
+          $config.CodeCoverage.Enabled = $false
+          $config.Output.Verbosity = 'Detailed'
+          Invoke-Pester -Configuration $config
