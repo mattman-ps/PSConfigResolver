@@ -1,0 +1,5 @@
+{
+  "extends": "markdownlint/style/markdownlint-recommended",
+  "MD013": false,
+  "MD033": false
+}
