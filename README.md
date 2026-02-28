@@ -24,10 +24,10 @@ Get-ExpandedConfig -ConfigFilePath <string> [-Test]
 **Returns:** Parsed configuration object (PSObject for JSON, XML object for XML)
 
 **Example Output:**
-```
+```none
 Name  UserPath               WinDir     OldUserName
 ----  --------               ------     -----------
-mattman-ps C:\Users\mattman-ps/.config C:\windows %DUMMY_VAR%
+user  C:\Users\user/.config  C:\windows %DUMMY_VAR%
 ```
 
 ### Expand-JsonConfig (Private)
@@ -171,7 +171,7 @@ $files | ForEach-Object {
 
 ## Environment Variable Expansion
 
-The module uses PowerShell's `[System.Environment]::ExpandEnvironmentVariables()` method to expand variables.
+The module uses PowerShell's `[System.Environment]::ExpandEnvironmentVariables()` method to expand variables.  For more information on supported variables, see the official documentation at [Microsoft](https://learn.microsoft.com/en-us/dotnet/api/system.environment.expandenvironmentvariables?view=net-10.0)
 
 **Supported Format:** `%VARIABLE_NAME%`
 
@@ -185,7 +185,7 @@ The module uses PowerShell's `[System.Environment]::ExpandEnvironmentVariables()
 
 ## Testing
 
-The module includes a comprehensive Pester test suite with 14 test cases.
+The module includes a comprehensive Pester test suite.
 
 ### Run Tests
 
