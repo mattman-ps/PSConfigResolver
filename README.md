@@ -6,26 +6,6 @@ A PowerShell module for reading configuration files (JSON and XML) and expanding
 
 This module provides a simple yet powerful way to work with configuration files that contain environment variable references. It automatically detects the file type and expands variables using PowerShell's built-in mechanisms. The module follows PowerShell best practices and includes comprehensive testing.
 
-## Project Structure
-
-```
-ExpandEnvVariables/
-├── src/
-│   ├── public/
-│   │   └── Get-ExpandedConfig.ps1         # Main public function
-│   └── private/
-│       ├── Expand-JsonConfig.ps1          # JSON expansion helper
-│       ├── Expand-XmlConfig.ps1           # XML expansion helper
-│       ├── Test-JsonConfigExpansion.ps1   # JSON test reporting
-│       └── Test-XmlConfigExpansion.ps1    # XML test reporting
-├── sample/
-│   ├── sample.json                        # Example JSON config
-│   └── sample.xml                         # Example XML config
-├── tests/
-│   └── ExpandConfig.tests.ps1             # Pester test suite
-└── README.md                              # This file
-```
-
 ## Functions
 
 ### Get-ExpandedConfig (Public)
