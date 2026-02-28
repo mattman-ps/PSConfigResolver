@@ -1,0 +1,22 @@
+{
+  "ProjectName": "PSConfigResolver",
+  "Description": "A PowerShell module for reading configuration files (JSON and XML) and expanding environment variables within them.",
+  "Version": "0.0.1",
+  "copyResourcesToModuleRoot": false,
+  "Manifest": {
+    "Author": "mattman-ps",
+    "PowerShellHostVersion": "7.4",
+    "GUID": "65463282-154b-4236-a415-1a3596441b50",
+    "Tags": [],
+    "ProjectUri": ""
+  },
+  "Pester": {
+    "TestResult": {
+      "Enabled": true,
+      "OutputFormat": "NUnitXml"
+    },
+    "Output": {
+      "Verbosity": "Detailed"
+    }
+  }
+}
