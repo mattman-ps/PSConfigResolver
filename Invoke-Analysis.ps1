@@ -46,7 +46,7 @@ param(
 # Ensure PSScriptAnalyzer is installed
 if (-not (Get-Module -Name PSScriptAnalyzer -ListAvailable)) {
     Write-Host "Installing PSScriptAnalyzer..." -ForegroundColor Yellow
-    Install-Module -Name PSScriptAnalyzer -Force -SkipPublisherCheck -Scope CurrentUser
+    Install-Module -Name PSScriptAnalyzer -Force -SkipPublisherCheck -AllowClobber -Scope CurrentUser -Confirm:$false
 }
 
 # Import PSScriptAnalyzer

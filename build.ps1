@@ -117,6 +117,20 @@ function Write-BuildLog {
 function Test-RequiredModules {
     Write-BuildLog "Checking required modules..." -Level Info
 
+    # Ensure NuGet provider is installed without prompting
+    $nugetProvider = Get-PackageProvider -Name NuGet -ErrorAction SilentlyContinue
+    if (-not $nugetProvider -or $nugetProvider.Version -lt '2.8.5.201') {
+        Write-BuildLog "Installing NuGet provider..." -Level Info
+        Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force -Scope CurrentUser -ErrorAction SilentlyContinue | Out-Null
+    }
+
+    # Ensure PSGallery is trusted to avoid prompts
+    $psGallery = Get-PSRepository -Name PSGallery -ErrorAction SilentlyContinue
+    if ($psGallery -and $psGallery.InstallationPolicy -ne 'Trusted') {
+        Write-BuildLog "Setting PSGallery as trusted..." -Level Info
+        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted -ErrorAction SilentlyContinue
+    }
+
     $requiredModules = @(
         'ModuleTools',
         'Pester',
@@ -126,7 +140,7 @@ function Test-RequiredModules {
     foreach ($module in $requiredModules) {
         if (-not (Get-Module -Name $module -ListAvailable)) {
             Write-BuildLog "Installing $module..." -Level Warning
-            Install-Module -Name $module -Force -SkipPublisherCheck -Scope CurrentUser -ErrorAction Stop
+            Install-Module -Name $module -Force -SkipPublisherCheck -AllowClobber -Scope CurrentUser -Confirm:$false -ErrorAction Stop
         }
     }
 

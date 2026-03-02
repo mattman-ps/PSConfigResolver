@@ -113,53 +113,6 @@ Describe "Get-ExpandedConfig" {
         ]
     }
 }
-
-Describe "Export-ExpandedConfig" {
-    BeforeAll {
-        $script:TempExportTestRoot = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath ("PSConfigResolver-ExportTests-" + [guid]::NewGuid().Guid)
-        New-Item -ItemType Directory -Path $script:TempExportTestRoot -Force | Out-Null
-    }
-
-    AfterAll {
-        if (Test-Path -LiteralPath $script:TempExportTestRoot) {
-            Remove-Item -LiteralPath $script:TempExportTestRoot -Recurse -Force -ErrorAction SilentlyContinue
-        }
-    }
-
-    It "exports JSON config to file" {
-        $outputPath = Join-Path -Path $script:TempExportTestRoot -ChildPath "exported.json"
-        $config = [pscustomobject]@{
-            AppName = 'PSConfigResolver'
-            Value   = 'Test'
-        }
-
-        { Export-ExpandedConfig -ConfigObject $config -OutputPath $outputPath -Force -ErrorAction Stop } | Should -Not -Throw
-        Test-Path -LiteralPath $outputPath | Should -Be $true
-    }
-
-    It "warns when built-in sensitive pattern is detected" {
-        $outputPath = Join-Path -Path $script:TempExportTestRoot -ChildPath "sensitive.json"
-        $config = [pscustomobject]@{
-            Username = 'demo'
-            Password = 'P@ssw0rd!'
-        }
-
-        Export-ExpandedConfig -ConfigObject $config -OutputPath $outputPath -WarningVariable warnings
-        ($warnings -join "`n") | Should -Match "potentially sensitive data"
-    }
-
-    It "continues with built-in detection when -UsePSSecretScanner is set but scanner is unavailable" {
-        $outputPath = Join-Path -Path $script:TempExportTestRoot -ChildPath "scanner-fallback.json"
-        $config = [pscustomobject]@{
-            api_key = 'test-key'
-        }
-
-        Mock -CommandName Get-Command -MockWith { $null } -ParameterFilter { $Name -in @('Find-SecretMatch', 'Find-Secret', 'Find-PSSecret') }
-
-        { Export-ExpandedConfig -ConfigObject $config -OutputPath $outputPath -UsePSSecretScanner -Force -ErrorAction Stop } | Should -Not -Throw
-        Test-Path -LiteralPath $outputPath | Should -Be $true
-    }
-}
 '@ | Set-Content -Path $deepJsonPath -Encoding utf8
 
                         $config = Get-ExpandedConfig -ConfigFilePath $deepJsonPath
@@ -195,6 +148,53 @@ Describe "Export-ExpandedConfig" {
             $config = "$PSScriptRoot\..\samples\sample.json" | Get-ExpandedConfig
             $config | Should -Not -BeNullOrEmpty
         }
+    }
+}
+
+Describe "Export-ExpandedConfig" {
+    BeforeAll {
+        $script:TempExportTestRoot = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath ("PSConfigResolver-ExportTests-" + [guid]::NewGuid().Guid)
+        New-Item -ItemType Directory -Path $script:TempExportTestRoot -Force | Out-Null
+    }
+
+    AfterAll {
+        if (Test-Path -LiteralPath $script:TempExportTestRoot) {
+            Remove-Item -LiteralPath $script:TempExportTestRoot -Recurse -Force -ErrorAction SilentlyContinue
+        }
+    }
+
+    It "exports JSON config to file" {
+        $outputPath = Join-Path -Path $script:TempExportTestRoot -ChildPath "exported.json"
+        $config = [pscustomobject]@{
+            AppName = 'PSConfigResolver'
+            Value   = 'Test'
+        }
+
+        { Export-ExpandedConfig -ConfigObject $config -OutputPath $outputPath -Force -Confirm:$false -ErrorAction Stop } | Should -Not -Throw
+        Test-Path -LiteralPath $outputPath | Should -Be $true
+    }
+
+    It "warns when built-in sensitive pattern is detected" {
+        $outputPath = Join-Path -Path $script:TempExportTestRoot -ChildPath "sensitive.json"
+        $config = [pscustomobject]@{
+            Username = 'demo'
+            Password = 'P@ssw0rd!'
+        }
+
+        Export-ExpandedConfig -ConfigObject $config -OutputPath $outputPath -Confirm:$false -WarningVariable warnings
+        ($warnings -join "`n") | Should -Match "potentially sensitive data"
+    }
+
+    It "continues with built-in detection when -UsePSSecretScanner is set but scanner is unavailable" {
+        $outputPath = Join-Path -Path $script:TempExportTestRoot -ChildPath "scanner-fallback.json"
+        $config = [pscustomobject]@{
+            api_key = 'test-key'
+        }
+
+        Mock -CommandName Get-Command -MockWith { $null } -ParameterFilter { $Name -in @('Find-SecretMatch', 'Find-Secret', 'Find-PSSecret') }
+
+        { Export-ExpandedConfig -ConfigObject $config -OutputPath $outputPath -UsePSSecretScanner -Force -Confirm:$false -ErrorAction Stop } | Should -Not -Throw
+        Test-Path -LiteralPath $outputPath | Should -Be $true
     }
 }
 

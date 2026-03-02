@@ -82,9 +82,9 @@ function Export-ExpandedConfig {
                 @{ Pattern = 'apikey|api_key'; Name = 'API Key' }
                 @{ Pattern = 'password|passwd|pwd'; Name = 'Password' }
                 @{ Pattern = 'secret|secret_key'; Name = 'Secret' }
-                @{ Pattern = 'token|auth.*token'; Name = 'Token' }
+                @{ Pattern = 'token|authtoken|auth-token'; Name = 'Token' }
                 @{ Pattern = 'credential|auth'; Name = 'Credential' }
-                @{ Pattern = 'key|private.*key'; Name = 'Private Key' }
+                @{ Pattern = 'key|privatekey|private-key'; Name = 'Private Key' }
             )
 
             $foundSensitive = @()
@@ -148,6 +148,7 @@ function Export-ExpandedConfig {
                 Write-Warning "Configuration contains potentially sensitive data: $($sensitiveList -join ', ')"
                 Write-Warning "Exporting this configuration may expose sensitive information."
                 
+                # Request confirmation for sensitive data export
                 if (-not $PSCmdlet.ShouldProcess($OutputPath, "Export configuration with sensitive data")) {
                     Write-Verbose "Export cancelled by user"
                     return
