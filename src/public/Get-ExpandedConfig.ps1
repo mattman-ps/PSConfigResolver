@@ -52,7 +52,11 @@ function Get-ExpandedConfig {
         switch ($extension) {
             '.json' {
                 # Read and parse the JSON file
-                $originalConfig = Get-Content -LiteralPath $ConfigFilePath -Raw | ConvertFrom-Json
+                $jsonString = Get-Content -LiteralPath $ConfigFilePath -Raw
+                $originalConfig = $jsonString | ConvertFrom-Json
+                
+                # Validate environment variables before expansion
+                $validationResult = Test-EnvironmentVariables -ConfigContent $jsonString -ConfigFilePath $ConfigFilePath
                 
                 # Expand environment variables using private function
                 $config = Expand-JsonConfig -ConfigObject $originalConfig
@@ -66,6 +70,9 @@ function Get-ExpandedConfig {
             '.xml' {
                 # Read the XML file content as a single string
                 $xmlString = Get-Content -LiteralPath $ConfigFilePath -Raw
+                
+                # Validate environment variables before expansion
+                $validationResult = Test-EnvironmentVariables -ConfigContent $xmlString -ConfigFilePath $ConfigFilePath
                 
                 # Expand environment variables using private function
                 $config = Expand-XmlConfig -XmlString $xmlString
