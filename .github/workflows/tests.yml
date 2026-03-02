@@ -21,6 +21,12 @@ jobs:
         run: |
           Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser
           Install-Module -Name ModuleTools -Force -SkipPublisherCheck -Scope CurrentUser
+          Install-Module -Name PSScriptAnalyzer -Force -SkipPublisherCheck -Scope CurrentUser
+
+      - name: Run PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          .\Invoke-Analysis.ps1 -ExitOnError
 
       - name: Build Module
         shell: pwsh
