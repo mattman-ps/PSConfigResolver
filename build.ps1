@@ -7,7 +7,7 @@
     Automates the complete build pipeline including:
     - Module building
     - Code analysis (PSScriptAnalyzer)
-    - Testing (Pester)
+    - Testing (Pester) with code coverage reporting
     - Packaging
 
 .PARAMETER Task
@@ -24,7 +24,7 @@
     Enable verbose output.
 
 .PARAMETER SkipTest
-    Skip running tests.
+    Skip running tests (also skips code coverage reporting).
 
 .PARAMETER SkipAnalysis
     Skip running code analysis.
@@ -38,7 +38,7 @@
 
 .EXAMPLE
     .\build.ps1 -Task All -Configuration Release
-    Runs complete build pipeline in Release mode.
+    Runs complete build pipeline in Release mode, including code coverage reporting.
 
 .EXAMPLE
     .\build.ps1 -Task Clean
@@ -254,13 +254,37 @@ function Invoke-Tests {
         $pesterConfig = New-PesterConfiguration
         $pesterConfig.Run.Path = 'tests'
         $pesterConfig.Run.Exit = $false
-        $pesterConfig.CodeCoverage.Enabled = $false
         $pesterConfig.Output.Verbosity = 'Detailed'
         $pesterConfig.TestResult.Enabled = $true
         $pesterConfig.TestResult.OutputPath = Join-Path -Path $resultsPath -ChildPath 'test-results.xml'
+        
+        # Configure code coverage
+        $pesterConfig.CodeCoverage.Enabled = $true
+        $pesterConfig.CodeCoverage.Path = 'src'
+        $pesterConfig.CodeCoverage.OutputPath = Join-Path -Path $resultsPath -ChildPath 'coverage.xml'
+        $pesterConfig.CodeCoverage.OutputFormat = 'CoverageGutters'
 
         # Run tests
         $testResults = Invoke-Pester -Configuration $pesterConfig
+        
+        # Display coverage summary
+        if ($testResults.CodeCoverage -and $testResults.CodeCoverage.Count -gt 0) {
+            Write-BuildLog "Code coverage analysis complete" -Level Success
+            
+            # Calculate coverage statistics
+            $totalCommands = 0
+            $coveredCommands = 0
+            
+            foreach ($file in $testResults.CodeCoverage) {
+                $totalCommands += $file.CommandCount
+                $coveredCommands += $file.CommandCount - $file.MissedCommands.Count
+            }
+            
+            if ($totalCommands -gt 0) {
+                $coveragePercent = [math]::Round(($coveredCommands / $totalCommands) * 100, 2)
+                Write-BuildLog "Overall coverage: $coveragePercent% ($coveredCommands/$totalCommands commands)" -Level Info
+            }
+        }
 
         # Check results
         if ($testResults.FailedCount -gt 0) {
@@ -270,6 +294,28 @@ function Invoke-Tests {
         }
         else {
             Write-BuildLog "All tests passed ($($testResults.PassedCount) tests)" -Level Success
+        }
+
+        # Generate detailed coverage report
+        Write-BuildLog "Generating code coverage reports..." -Level Info
+        try {
+            $coverageXmlPath = Join-Path -Path $resultsPath -ChildPath 'coverage.xml'
+            if (Test-Path -LiteralPath $coverageXmlPath) {
+                & "$ProjectRoot\Generate-CoverageReport.ps1" `
+                    -CoverageXmlPath $coverageXmlPath `
+                    -OutputPath $resultsPath `
+                    -Format All `
+                    -Threshold 80 `
+                    -IncludeUntested
+                Write-BuildLog "Code coverage reports generated" -Level Success
+            }
+            else {
+                Write-BuildLog "Coverage file not found: $coverageXmlPath" -Level Warning
+            }
+        }
+        catch {
+            Write-BuildLog "Error generating coverage report: $_" -Level Warning
+            # Don't fail build if coverage report generation fails
         }
     }
     catch {

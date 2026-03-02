@@ -395,6 +395,132 @@ try {
    # Review test output for any ✗ FAILED items
    ```
 
+## Code Coverage Reporting
+
+The project uses Pester's code coverage feature to identify untested code paths and measure test completeness. Coverage reports are automatically generated during the build process.
+
+### Automatic Coverage Generation
+
+Coverage reports are generated automatically when running the build script:
+
+```powershell
+# Generate all reports including code coverage
+.\build.ps1 -Task All
+
+# Run tests only (includes coverage reporting)
+.\build.ps1 -Task Test
+
+# Skip tests and coverage
+.\build.ps1 -Task All -SkipTest
+```
+
+### Coverage Reports
+
+After running tests, two coverage reports are generated in the `results/` directory:
+
+1. **coverage-report.html** - Interactive HTML dashboard
+   - Visual progress bars and color-coded coverage levels
+   - File-by-file breakdown with coverage percentages
+   - Threshold status and gap analysis
+   - Distribution of files by coverage level
+
+2. **coverage-report.txt** - Detailed text summary
+   - Overall statistics and metrics
+   - Per-file coverage breakdown
+   - Identification of files below threshold
+   - Optional list of uncovered code lines
+
+3. **coverage.xml** - Machine-readable CoverageGutters format
+   - Used by coverage analysis tools
+   - Can be imported into CI/CD systems
+   - Contains line-by-line coverage data
+
+### Coverage Metrics
+
+The coverage reports include the following metrics:
+
+- **Overall Coverage:** Percentage of code lines executed during tests
+- **Covered Lines:** Number of code lines tested
+- **Uncovered Lines:** Number of code lines not tested
+- **Coverage by File:** Individual file coverage percentages
+- **Distribution:** Count of files in each coverage category:
+  - Excellent: 90-100%
+  - Good: 75-89%
+  - Fair: 50-74%
+  - Poor: <50%
+
+### Interpreting Coverage Reports
+
+**HTML Report:**
+- Open `results/coverage-report.html` in a web browser
+- Green indicators (✓) show files meeting the 80% threshold
+- Red indicators (✗) show files below threshold
+- Hover over progress bars to see coverage details
+
+**Text Report:**
+- Review `results/coverage-report.txt` for detailed metrics
+- Files are sorted by coverage percentage (highest to lowest)
+- Files below the threshold are highlighted with warnings
+
+### Coverage Thresholds
+
+The default coverage threshold is **80%**. This can be modified in the build script:
+
+```powershell
+# Edit build.ps1 and adjust the threshold parameter in Invoke-Tests:
+& "$ProjectRoot\Generate-CoverageReport.ps1" `
+    -CoverageXmlPath $coverageXmlPath `
+    -OutputPath $resultsPath `
+    -Format All `
+    -Threshold 85  # Change this value
+```
+
+### Improving Code Coverage
+
+To increase code coverage:
+
+1. **Review untested paths:** Check the coverage report for files below threshold
+2. **Add test cases:** Create tests for uncovered code paths
+3. **Run coverage analysis:** Execute `.\build.ps1 -Task Test` to generate fresh reports
+4. **Iterate:** Repeat until coverage reaches target percentage
+
+### Standalone Coverage Report Generation
+
+You can also generate coverage reports independently without running the full build:
+
+```powershell
+# Generate both HTML and text reports
+.\Generate-CoverageReport.ps1 -CoverageXmlPath ".\results\coverage.xml"
+
+# Generate only HTML report
+.\Generate-CoverageReport.ps1 -CoverageXmlPath ".\results\coverage.xml" -Format Html
+
+# Generate with custom threshold
+.\Generate-CoverageReport.ps1 -CoverageXmlPath ".\results\coverage.xml" -Threshold 85
+
+# Include detailed untested code paths
+.\Generate-CoverageReport.ps1 -CoverageXmlPath ".\results\coverage.xml" -IncludeUntested
+```
+
+### CI/CD Integration
+
+The coverage reports can be integrated into CI/CD pipelines:
+
+```powershell
+# Example: Azure Pipelines
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(Build.SourcesDirectory)/build.ps1'
+    arguments: '-Task All -Configuration Release -ExitOnError'
+
+# The coverage.xml file can then be published to coverage services
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(Build.SourcesDirectory)/results/coverage.xml'
+```
+
 ## Troubleshooting
 
 ### Configuration won't load
