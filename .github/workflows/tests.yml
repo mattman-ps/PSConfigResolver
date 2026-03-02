@@ -51,3 +51,19 @@ jobs:
         run: |
           dotnet tool install -g dotnet-reportgenerator-globaltool
           reportgenerator -reports:"./results/coverage.xml" -targetdir:"./results/coverage-report" -reporttypes:Html
+
+  codeql:
+    runs-on: windows-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: 'powershell'
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
