@@ -21,3 +21,4 @@ temp/
 run.ps1
 dist/
 justfile
+todos.md
