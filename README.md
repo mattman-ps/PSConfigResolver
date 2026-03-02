@@ -570,6 +570,13 @@ The coverage reports can be integrated into CI/CD pipelines:
 - Check for unexpanded variables in output
 - Verify environment variables are set
 
+## Acknowledgements
+
+- Built with PowerShell 7.4+
+- Module designed using [ModuleTools](https://github.com/belibug/ModuleTools)
+- Testing powered by [Pester](https://pester.dev/)
+- Secrets Scanning powered by [PSSecretScanner](https://github.com/leeberg/PSSecretScanner)
+
 ## License
 
 This module is provided as-is for configuration file management purposes.
