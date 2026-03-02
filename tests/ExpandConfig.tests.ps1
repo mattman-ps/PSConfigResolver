@@ -22,17 +22,31 @@ Describe "Get-ExpandedConfig" {
         It "should read and expand JSON configuration" {
             $config = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json"
             $config | Should -Not -BeNullOrEmpty
-            $config.Name | Should -Be $env:USERNAME
+            $config.AppName | Should -Be "PSConfigResolver"
         }
         
-        It "should expand environment variables in JSON" {
+        It "should expand environment variables in nested JSON objects" {
             $config = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json"
-            $config.WinDir | Should -Match "^[A-Za-z]:\\"
+            $config.Paths.WindowsDirectory | Should -Match "^[A-Za-z]:\\"
+            $config.Paths.UserProfile | Should -Be $env:USERPROFILE
         }
         
-        It "should preserve unexpanded variables in JSON" {
+        It "should expand environment variables in JSON arrays" {
             $config = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json"
-            $config.OldUserName | Should -Match "^%.*%$"
+            $config.Services[1].QueuePath | Should -Match "^[A-Za-z]:\\"
+        }
+
+        It "should preserve unexpanded variables in nested JSON values" {
+            $config = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json"
+            $config.Services[0].ApiKey | Should -Match "^%.*%$"
+        }
+
+        It "should preserve non-string value types in JSON" {
+            $config = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json"
+            $config.Features.RetryCount | Should -BeOfType [long]
+            $config.Features.RetryCount | Should -Be 3
+            $config.Features.EnableTelemetry | Should -BeOfType [bool]
+            $config.Features.EnableTelemetry | Should -Be $true
         }
     }
     
@@ -52,6 +66,11 @@ Describe "Get-ExpandedConfig" {
         It "should return config even with -Test parameter" {
             $config = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json" -Test
             $config | Should -Not -BeNullOrEmpty
+        }
+
+        It "should report nested path for unexpanded variables" {
+            $null = Get-ExpandedConfig -ConfigFilePath "$PSScriptRoot\..\samples\sample.json" -Test -WarningVariable warnings
+            ($warnings -join "`n") | Should -Match "Services\[0\]\.ApiKey"
         }
     }
     

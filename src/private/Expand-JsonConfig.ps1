@@ -20,11 +20,44 @@ function Expand-JsonConfig {
     )
     
     process {
-        # Expand environment variables in each property value
-        $ConfigObject.PSObject.Properties | ForEach-Object {
-            $_.Value = [System.Environment]::ExpandEnvironmentVariables($_.Value)
+        function Expand-JsonValue {
+            param(
+                [Parameter(Mandatory = $false)]
+                $Value
+            )
+
+            if ($null -eq $Value) {
+                return $null
+            }
+
+            if ($Value -is [string]) {
+                return [System.Environment]::ExpandEnvironmentVariables($Value)
+            }
+
+            if ($Value -is [PSCustomObject]) {
+                $Value.PSObject.Properties | ForEach-Object {
+                    $_.Value = Expand-JsonValue -Value $_.Value
+                }
+                return $Value
+            }
+
+            if ($Value -is [System.Collections.IDictionary]) {
+                foreach ($key in @($Value.Keys)) {
+                    $Value[$key] = Expand-JsonValue -Value $Value[$key]
+                }
+                return $Value
+            }
+
+            if ($Value -is [System.Collections.IList]) {
+                for ($i = 0; $i -lt $Value.Count; $i++) {
+                    $Value[$i] = Expand-JsonValue -Value $Value[$i]
+                }
+                return $Value
+            }
+
+            return $Value
         }
-        
-        return $ConfigObject
+
+        return Expand-JsonValue -Value $ConfigObject
     }
 }

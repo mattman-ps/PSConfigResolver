@@ -1,5 +1,14 @@
 <Config>
-  <Name>%USERNAME%</Name>
-  <UserPath>%USERPROFILE%/.config</UserPath>
-  <WinDir>%SystemRoot%</WinDir>
+  <Application>
+    <Name>PSConfigResolver</Name>
+    <Environment>Development</Environment>
+  </Application>
+  <Paths>
+    <UserProfile>%USERPROFILE%</UserProfile>
+    <Logs>%LOCALAPPDATA%/PSConfigResolver/logs</Logs>
+    <Cache>%TEMP%/PSConfigResolver/cache</Cache>
+  </Paths>
+  <Legacy>
+    <ApiKey>%DUMMY_VAR%</ApiKey>
+  </Legacy>
 </Config>

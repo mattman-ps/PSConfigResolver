@@ -1,6 +1,28 @@
 {
-  "Name": "%USERNAME%",
-  "UserPath": "%USERPROFILE%/.config",
-  "WinDir": "%SystemRoot%",
-  "OldUserName": "%DUMMY_VAR%"
+  "AppName": "PSConfigResolver",
+  "Environment": "Development",
+  "Paths": {
+    "UserProfile": "%USERPROFILE%",
+    "WindowsDirectory": "%SystemRoot%",
+    "Cache": "%TEMP%/PSConfigResolver/cache"
+  },
+  "Logging": {
+    "Level": "Information",
+    "FilePath": "%LOCALAPPDATA%/PSConfigResolver/logs/app.log"
+  },
+  "Services": [
+    {
+      "Name": "Api",
+      "BaseUrl": "https://api.contoso.local",
+      "ApiKey": "%DUMMY_VAR%"
+    },
+    {
+      "Name": "Worker",
+      "QueuePath": "%TEMP%/queues/jobs"
+    }
+  ],
+  "Features": {
+    "RetryCount": 3,
+    "EnableTelemetry": true
+  }
 }

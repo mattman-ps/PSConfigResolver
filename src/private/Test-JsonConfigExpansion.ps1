@@ -29,25 +29,81 @@ function Test-JsonConfigExpansion {
     )
     
     process {
+        function Get-JsonStringNodes {
+            param(
+                [Parameter(Mandatory = $false)]
+                $Value,
+
+                [Parameter(Mandatory = $true)]
+                [string]$Path
+            )
+
+            if ($null -eq $Value) {
+                return @()
+            }
+
+            if ($Value -is [string]) {
+                return ,@{
+                    Path = $Path
+                    Value = $Value
+                }
+            }
+
+            if ($Value -is [PSCustomObject]) {
+                $results = @()
+                foreach ($property in $Value.PSObject.Properties) {
+                    $childPath = if ($Path -eq '$') { $property.Name } else { "$Path.$($property.Name)" }
+                    $results += Get-JsonStringNodes -Value $property.Value -Path $childPath
+                }
+                return $results
+            }
+
+            if ($Value -is [System.Collections.IDictionary]) {
+                $results = @()
+                foreach ($key in $Value.Keys) {
+                    $childPath = if ($Path -eq '$') { [string]$key } else { "$Path.$key" }
+                    $results += Get-JsonStringNodes -Value $Value[$key] -Path $childPath
+                }
+                return $results
+            }
+
+            if ($Value -is [System.Collections.IList]) {
+                $results = @()
+                for ($i = 0; $i -lt $Value.Count; $i++) {
+                    $results += Get-JsonStringNodes -Value $Value[$i] -Path "$Path[$i]"
+                }
+                return $results
+            }
+
+            return @()
+        }
+
+        $originalStringNodes = Get-JsonStringNodes -Value $ConfigObject -Path '$'
+        $expandedStringNodes = Get-JsonStringNodes -Value $ExpandedObject -Path '$'
+        $expandedMap = @{}
+
+        foreach ($node in $expandedStringNodes) {
+            $expandedMap[$node.Path] = $node.Value
+        }
+
         $expansionResults = @()
-        
-        # Compare original and expanded values
-        $ConfigObject.PSObject.Properties | ForEach-Object {
-            $propertyName = $_.Name
-            $originalValue = $_.Value
-            $expandedValue = $ExpandedObject.$propertyName
-            
-            $unexpanded = $expandedValue -match '%\w+%'
+
+        foreach ($node in $originalStringNodes) {
+            $containsVariable = $node.Value -match '%\w+%'
+            $expandedValue = if ($expandedMap.ContainsKey($node.Path)) { $expandedMap[$node.Path] } else { $null }
+            $unexpanded = $containsVariable -and ($expandedValue -match '%\w+%')
+
             $result = @{
-                PropertyName = $propertyName
-                OriginalValue = $originalValue
+                PropertyName = $node.Path
+                OriginalValue = $node.Value
                 ExpandedValue = $expandedValue
                 Success = -not $unexpanded
+                ContainsVariable = $containsVariable
             }
             $expansionResults += $result
-            
+
             if ($unexpanded) {
-                Write-Warning "Unexpanded variables found in $propertyName : $expandedValue"
+                Write-Warning "Unexpanded variables found in $($node.Path) : $expandedValue"
             }
         }
         
@@ -55,8 +111,8 @@ function Test-JsonConfigExpansion {
         Write-Host "`n=== Environment Variable Expansion Test Results ===" -ForegroundColor Cyan
         Write-Host "File: $ConfigFilePath`n" -ForegroundColor Gray
         
-        $successCount = ($expansionResults | Where-Object { $_.Success }).Count
-        $failureCount = ($expansionResults | Where-Object { -not $_.Success }).Count
+        $successCount = @($expansionResults | Where-Object { $_.Success }).Count
+        $failureCount = @($expansionResults | Where-Object { -not $_.Success }).Count
         
         foreach ($result in $expansionResults) {
             $statusColor = if ($result.Success) { "Green" } else { "Red" }

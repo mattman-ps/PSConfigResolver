@@ -25,9 +25,9 @@ Get-ExpandedConfig -ConfigFilePath <string> [-Test]
 
 **Example Output:**
 ```none
-Name  UserPath               WinDir     OldUserName
-----  --------               ------     -----------
-user  C:\Users\user/.config  C:\windows %DUMMY_VAR%
+AppName          Environment Paths                             Logging
+-------          ----------- -----                             -------
+PSConfigResolver Development @{UserProfile=...; Cache=...}    @{Level=Information; FilePath=...}
 ```
 
 ### Expand-JsonConfig (Private)
@@ -73,11 +73,12 @@ Generates a detailed test report for XML configuration expansion.
 . '.\src\public\Get-ExpandedConfig.ps1'
 
 # Read and expand JSON configuration
-$config = Get-ExpandedConfig -ConfigFilePath ".\sample\sample.json"
+$config = Get-ExpandedConfig -ConfigFilePath ".\samples\sample.json"
 
 # Access the expanded values
-Write-Host "User Path: $($config.UserPath)"
-Write-Host "Windows Directory: $($config.WinDir)"
+Write-Host "App: $($config.AppName)"
+Write-Host "User Profile: $($config.Paths.UserProfile)"
+Write-Host "Worker Queue: $($config.Services[1].QueuePath)"
 ```
 
 ### Basic Usage - XML File
@@ -87,50 +88,51 @@ Write-Host "Windows Directory: $($config.WinDir)"
 . '.\src\public\Get-ExpandedConfig.ps1'
 
 # Read and expand XML configuration
-$config = Get-ExpandedConfig -ConfigFilePath ".\sample\sample.xml"
+$config = Get-ExpandedConfig -ConfigFilePath ".\samples\sample.xml"
 
 # Access the expanded values
-Write-Host "User Path: $($config.Config.UserPath)"
-Write-Host "Windows Directory: $($config.Config.WinDir)"
+Write-Host "App Name: $($config.Config.Application.Name)"
+Write-Host "Logs Path: $($config.Config.Paths.Logs)"
 ```
 
 ### Using the Test Parameter
 
 ```powershell
 # Display detailed expansion results
-$config = Get-ExpandedConfig -ConfigFilePath ".\sample\sample.json" -Test
+$config = Get-ExpandedConfig -ConfigFilePath ".\samples\sample.json" -Test
 ```
 
 **Output:**
 ```
 === Environment Variable Expansion Test Results ===
-File: .\sample\sample.json
+File: .\samples\sample.json
 
-✓ SUCCESS - Name
-✓ SUCCESS - UserPath
-✓ SUCCESS - WinDir
-✗ FAILED - OldUserName
-  Original:  %DUMMY_VAR%
-  Expanded:  %DUMMY_VAR%
+✓ SUCCESS - AppName
+✓ SUCCESS - Paths.UserProfile
+✓ SUCCESS - Paths.WindowsDirectory
+✓ SUCCESS - Logging.FilePath
+✗ FAILED - Services[0].ApiKey
+    Original:  %DUMMY_VAR%
+    Expanded:  %DUMMY_VAR%
 
-Summary: 3 successful, 1 failed
+Summary: 11 successful, 1 failed
 ```
 
 ### Pipeline Support
 
 ```powershell
 # Pass the file path via pipeline
-".\sample\sample.json" | Get-ExpandedConfig
+".\samples\sample.json" | Get-ExpandedConfig
 
 # Chain with other commands
-".\sample\sample.json" | Get-ExpandedConfig | Select-Object Name, UserPath
+".\samples\sample.json" | Get-ExpandedConfig | Select-Object AppName, Environment
 ```
 
 ### Multiple Files
 
 ```powershell
 # Process multiple configuration files
-$files = @(".\sample\sample.json", ".\sample\sample.xml")
+$files = @(".\samples\sample.json", ".\samples\sample.xml")
 $configs = $files | Get-ExpandedConfig
 
 # Or with test results
@@ -146,24 +148,48 @@ $files | ForEach-Object {
 
 ```json
 {
-  "Name": "mattman-ps",
-  "UserPath": "%USERPROFILE%/.config",
-  "WinDir": "%WINDIR%",
-  "OldUserName": "%DUMMY_VAR%"
+    "AppName": "PSConfigResolver",
+    "Environment": "Development",
+    "Paths": {
+        "UserProfile": "%USERPROFILE%",
+        "WindowsDirectory": "%SystemRoot%",
+        "Cache": "%TEMP%/PSConfigResolver/cache"
+    },
+    "Services": [
+        {
+            "Name": "Api",
+            "ApiKey": "%DUMMY_VAR%"
+        },
+        {
+            "Name": "Worker",
+            "QueuePath": "%TEMP%/queues/jobs"
+        }
+    ],
+    "Features": {
+        "RetryCount": 3,
+        "EnableTelemetry": true
+    }
 }
 ```
 
-**Supported:** Environment variables in property values will be expanded
+**Supported:** Environment variables in string values are expanded recursively (including nested objects and arrays)
 
 ### XML Format
 
 ```xml
 <?xml version="1.0"?>
 <Config>
-  <Name>mattman-ps</Name>
-  <UserPath>%USERPROFILE%/.config</UserPath>
-  <WinDir>%WINDIR%</WinDir>
-  <OldUserName>%DUMMY_VAR%</OldUserName>
+    <Application>
+        <Name>PSConfigResolver</Name>
+        <Environment>Development</Environment>
+    </Application>
+    <Paths>
+        <UserProfile>%USERPROFILE%</UserProfile>
+        <Logs>%LOCALAPPDATA%/PSConfigResolver/logs</Logs>
+    </Paths>
+    <Legacy>
+        <ApiKey>%DUMMY_VAR%</ApiKey>
+    </Legacy>
 </Config>
 ```
 
