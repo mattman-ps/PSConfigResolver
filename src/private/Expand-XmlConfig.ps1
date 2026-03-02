@@ -20,8 +20,8 @@ function Expand-XmlConfig {
     )
     
     process {
-        # Expand the environment variables in the string
-        $expandedString = [System.Environment]::ExpandEnvironmentVariables($XmlString)
+        # Expand the environment variables in the string recursively
+        $expandedString = Expand-VariablesRecursively -InputString $XmlString
         
         # Cast the expanded string as an XML object for easy access
         [xml]$config = $expandedString

@@ -31,7 +31,7 @@ function Expand-JsonConfig {
             }
 
             if ($Value -is [string]) {
-                return [System.Environment]::ExpandEnvironmentVariables($Value)
+                return Expand-VariablesRecursively -InputString $Value
             }
 
             if ($Value -is [PSCustomObject]) {

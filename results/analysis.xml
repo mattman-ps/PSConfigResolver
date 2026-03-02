@@ -4,26 +4,26 @@
       <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord</T>
       <T>System.Object</T>
     </TN>
-    <ToString>The cmdlet 'Expand-XmlConfig' returns an object of type 'System.String' but this type is not declared in the OutputType attribute.</ToString>
+    <ToString>The cmdlet 'Expand-VariablesRecursively' returns an object of type 'System.String' but this type is not declared in the OutputType attribute.</ToString>
     <Props>
-      <S N="Message">The cmdlet 'Expand-XmlConfig' returns an object of type 'System.String' but this type is not declared in the OutputType attribute.</S>
+      <S N="Message">The cmdlet 'Expand-VariablesRecursively' returns an object of type 'System.String' but this type is not declared in the OutputType attribute.</S>
       <Obj N="Extent" RefId="1">
         <TN RefId="1">
           <T>System.Management.Automation.Language.InternalScriptExtent</T>
           <T>System.Object</T>
         </TN>
-        <ToString>return $config</ToString>
+        <ToString>return $currentValue</ToString>
         <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\private\Expand-XmlConfig.ps1</S>
+          <S N="File">C:\apps\PSConfigResolver\src\private\Expand-VariablesRecursively.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
-          <I32 N="StartLineNumber">29</I32>
+          <I32 N="StartLineNumber">53</I32>
           <I32 N="StartColumnNumber">9</I32>
-          <I32 N="EndLineNumber">29</I32>
-          <I32 N="EndColumnNumber">23</I32>
-          <S N="Text">return $config</S>
-          <I32 N="StartOffset">845</I32>
-          <I32 N="EndOffset">859</I32>
+          <I32 N="EndLineNumber">53</I32>
+          <I32 N="EndColumnNumber">29</I32>
+          <S N="Text">return $currentValue</S>
+          <I32 N="StartOffset">1748</I32>
+          <I32 N="EndOffset">1768</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSUseOutputTypeCorrectly</S>
@@ -37,14 +37,14 @@
         <ToString>Information</ToString>
         <U32>0</U32>
       </Obj>
-      <S N="ScriptName">Expand-XmlConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Expand-XmlConfig.ps1</S>
+      <S N="ScriptName">Expand-VariablesRecursively.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Expand-VariablesRecursively.ps1</S>
       <Nil N="RuleSuppressionID" />
       <Nil N="SuggestedCorrections" />
       <B N="IsSuppressed">false</B>
     </Props>
     <MS>
-      <I32 N="Line">29</I32>
+      <I32 N="Line">53</I32>
       <I32 N="Column">9</I32>
     </MS>
   </Obj>

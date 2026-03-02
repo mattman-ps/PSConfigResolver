@@ -1,0 +1,6 @@
+{
+  "AppName": "RecursiveTest",
+  "BasePath": "%TEMP%",
+  "LogPath": "%TEMP%\\RecursiveTest\\logs",
+  "CachePath": "%TEMP%\\RecursiveTest\\cache"
+}
