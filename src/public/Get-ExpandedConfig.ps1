@@ -29,16 +29,7 @@ function Get-ExpandedConfig {
     param(
         [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
         [ValidateNotNullOrEmpty()]
-        [ValidateScript({
-            if (-not (Test-Path -LiteralPath $_ -PathType Leaf)) {
-                throw "File '$_' does not exist."
-            }
-            $extension = [System.IO.Path]::GetExtension($_).ToLower()
-            if ($extension -notin @('.json', '.xml')) {
-                throw "File '$_' must have a .json or .xml extension."
-            }
-            return $true
-        })]
+        [ValidateScript({ if (-not (Test-Path -LiteralPath $_ -PathType Leaf)) { throw "File '$_' does not exist." } $extension = [System.IO.Path]::GetExtension($_).ToLower(); if ($extension -notin @('.json', '.xml')) { throw "File '$_' must have a .json or .xml extension." } return $true })]
         [string]$ConfigFilePath,
         
         [Parameter(Mandatory = $false)]

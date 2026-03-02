@@ -23,6 +23,7 @@ function Expand-VariablesRecursively {
         # If TEMP=C:\Temp and APP_NAME=MyApp, returns: C:\Temp\MyApp
     #>
     [CmdletBinding()]
+    [OutputType([string])]
     param(
         [Parameter(Mandatory = $true)]
         [string]$InputString,

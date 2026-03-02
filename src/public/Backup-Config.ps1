@@ -30,12 +30,7 @@ function Backup-Config {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-        [ValidateScript({
-            if (-not (Test-Path -LiteralPath $_ -PathType Leaf)) {
-                throw "File '$_' does not exist."
-            }
-            return $true
-        })]
+        [ValidateScript({ if (-not (Test-Path -LiteralPath $_ -PathType Leaf)) { throw "File '$_' does not exist." } return $true })]
         [string]$ConfigFilePath,
         
         [Parameter(Mandatory = $false)]
