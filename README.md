@@ -93,6 +93,7 @@ Get-ChildItem -Path ".\configs" -Filter "*.json" |
 
 - See [Usage Examples](#usage-examples) for more detailed scenarios
 - Read [Configuration File Formats](#configuration-file-formats) to understand supported formats
+- Review [Export-ExpandedConfig (Public)](#export-expandedconfig-public) for optional sensitive-data scanning with PSSecretScanner
 - Check [Best Practices](#best-practices) for production use
 - Review [Troubleshooting](#troubleshooting) if you encounter issues
 
@@ -118,6 +119,37 @@ Get-ExpandedConfig -ConfigFilePath <string> [-Test]
 AppName          Environment Paths                             Logging
 -------          ----------- -----                             -------
 PSConfigResolver Development @{UserProfile=...; Cache=...}    @{Level=Information; FilePath=...}
+```
+
+### Export-ExpandedConfig (Public)
+
+Exports an expanded configuration object to JSON or XML, with optional sensitive-data scanning.
+
+**Syntax:**
+```powershell
+Export-ExpandedConfig -ConfigObject <object> -OutputPath <string> [-Format Json|Xml] [-Force] [-UsePSSecretScanner]
+```
+
+**Parameters:**
+- `-ConfigObject` (Required): Expanded configuration object to export
+- `-OutputPath` (Required): Target file path (`.json` or `.xml`)
+- `-Format` (Optional): Output format. If omitted, inferred from `-OutputPath` extension
+- `-Force` (Optional): Skip warning confirmation when sensitive patterns are detected
+- `-UsePSSecretScanner` (Optional): Uses PSSecretScanner if installed, then falls back to built-in checks
+
+**Notes:**
+- Built-in sensitive pattern detection always runs
+- If `-UsePSSecretScanner` is specified but PSSecretScanner is not installed, export continues with a warning
+
+**Examples:**
+```powershell
+# Standard export with built-in sensitive pattern checks
+$config = Get-ExpandedConfig -ConfigFilePath ".\samples\sample.json"
+Export-ExpandedConfig -ConfigObject $config -OutputPath ".\results\exported-config.json"
+
+# Optional PSSecretScanner integration
+Install-Module PSSecretScanner -Scope CurrentUser
+Export-ExpandedConfig -ConfigObject $config -OutputPath ".\results\exported-config.json" -UsePSSecretScanner
 ```
 
 ### Expand-JsonConfig (Private)
