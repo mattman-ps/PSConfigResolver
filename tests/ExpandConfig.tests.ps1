@@ -4,6 +4,17 @@ BeforeAll {
 }
 
 Describe "Get-ExpandedConfig" {
+    BeforeAll {
+        $script:TempConfigTestRoot = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath ("PSConfigResolver-Tests-" + [guid]::NewGuid().Guid)
+        New-Item -ItemType Directory -Path $script:TempConfigTestRoot -Force | Out-Null
+    }
+
+    AfterAll {
+        if (Test-Path -LiteralPath $script:TempConfigTestRoot) {
+            Remove-Item -LiteralPath $script:TempConfigTestRoot -Recurse -Force -ErrorAction SilentlyContinue
+        }
+    }
+
     Context "Parameter Validation" {
         It "should reject non-existent files" {
             { Get-ExpandedConfig -ConfigFilePath "C:\NonExistent\file.json" -ErrorAction Stop } | Should -Throw
@@ -57,6 +68,64 @@ Describe "Get-ExpandedConfig" {
             $config -is [xml] | Should -Be $true
         }
     }
+
+        Context "Error Handling" {
+                It "should throw for invalid JSON content" {
+                        $invalidJsonPath = Join-Path -Path $script:TempConfigTestRoot -ChildPath "invalid.json"
+                        Set-Content -Path $invalidJsonPath -Value '{ "Name": "app" "Port": 8080 }' -Encoding utf8
+
+                        { Get-ExpandedConfig -ConfigFilePath $invalidJsonPath -ErrorAction Stop } | Should -Throw
+                }
+
+                It "should throw for invalid XML content" {
+                        $invalidXmlPath = Join-Path -Path $script:TempConfigTestRoot -ChildPath "invalid.xml"
+                        Set-Content -Path $invalidXmlPath -Value '<Config><Name>Broken</Config>' -Encoding utf8
+
+                        { Get-ExpandedConfig -ConfigFilePath $invalidXmlPath -ErrorAction Stop } | Should -Throw
+                }
+
+                It "should throw for empty JSON files" {
+                        $emptyJsonPath = Join-Path -Path $script:TempConfigTestRoot -ChildPath "empty.json"
+                        Set-Content -Path $emptyJsonPath -Value '' -Encoding utf8
+
+                        { Get-ExpandedConfig -ConfigFilePath $emptyJsonPath -ErrorAction Stop } | Should -Throw
+                }
+        }
+
+        Context "JSON Edge Cases" {
+                It "should expand deep nested JSON and preserve null and primitive values" {
+                        $deepJsonPath = Join-Path -Path $script:TempConfigTestRoot -ChildPath "deep-nested.json"
+                        @'
+{
+    "Application": {
+        "Nodes": [
+            {
+                "Path": "%TEMP%/node-a"
+            },
+            {
+                "Flag": true,
+                "Retries": 5,
+                "Optional": null,
+                "Inner": {
+                    "Profile": "%USERPROFILE%"
+                }
+            }
+        ]
+    }
+}
+'@ | Set-Content -Path $deepJsonPath -Encoding utf8
+
+                        $config = Get-ExpandedConfig -ConfigFilePath $deepJsonPath
+
+                        $config.Application.Nodes[0].Path | Should -Match "^[A-Za-z]:\\"
+                        $config.Application.Nodes[1].Inner.Profile | Should -Be $env:USERPROFILE
+                        $config.Application.Nodes[1].Flag | Should -BeOfType [bool]
+                        $config.Application.Nodes[1].Flag | Should -Be $true
+                        $config.Application.Nodes[1].Retries | Should -BeOfType [long]
+                        $config.Application.Nodes[1].Retries | Should -Be 5
+                        $config.Application.Nodes[1].Optional | Should -Be $null
+                }
+        }
     
     Context "Test Parameter" {
         It "should accept -Test switch" {
