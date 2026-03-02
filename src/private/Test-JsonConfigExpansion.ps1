@@ -43,7 +43,7 @@ function Test-JsonConfigExpansion {
             }
 
             if ($Value -is [string]) {
-                return ,@{
+                return , @{
                     Path = $Path
                     Value = $Value
                 }

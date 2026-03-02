@@ -65,8 +65,8 @@
           <I32 N="EndLineNumber">111</I32>
           <I32 N="EndColumnNumber">97</I32>
           <S N="Text">Write-Host "`n=== Environment Variable Expansion Test Results ===" -ForegroundColor Cyan</S>
-          <I32 N="StartOffset">3730</I32>
-          <I32 N="EndOffset">3818</I32>
+          <I32 N="StartOffset">3731</I32>
+          <I32 N="EndOffset">3819</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -103,8 +103,8 @@
           <I32 N="EndLineNumber">112</I32>
           <I32 N="EndColumnNumber">67</I32>
           <S N="Text">Write-Host "File: $ConfigFilePath`n" -ForegroundColor Gray</S>
-          <I32 N="StartOffset">3828</I32>
-          <I32 N="EndOffset">3886</I32>
+          <I32 N="StartOffset">3829</I32>
+          <I32 N="EndOffset">3887</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -141,8 +141,8 @@
           <I32 N="EndLineNumber">121</I32>
           <I32 N="EndColumnNumber">89</I32>
           <S N="Text">Write-Host "$status - $($result.PropertyName)" -ForegroundColor $statusColor</S>
-          <I32 N="StartOffset">4309</I32>
-          <I32 N="EndOffset">4385</I32>
+          <I32 N="StartOffset">4310</I32>
+          <I32 N="EndOffset">4386</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -179,8 +179,8 @@
           <I32 N="EndLineNumber">123</I32>
           <I32 N="EndColumnNumber">91</I32>
           <S N="Text">Write-Host "  Original:  $($result.OriginalValue)" -ForegroundColor Yellow</S>
-          <I32 N="StartOffset">4444</I32>
-          <I32 N="EndOffset">4518</I32>
+          <I32 N="StartOffset">4445</I32>
+          <I32 N="EndOffset">4519</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -217,8 +217,8 @@
           <I32 N="EndLineNumber">124</I32>
           <I32 N="EndColumnNumber">91</I32>
           <S N="Text">Write-Host "  Expanded:  $($result.ExpandedValue)" -ForegroundColor Yellow</S>
-          <I32 N="StartOffset">4536</I32>
-          <I32 N="EndOffset">4610</I32>
+          <I32 N="StartOffset">4537</I32>
+          <I32 N="EndOffset">4611</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -255,8 +255,8 @@
           <I32 N="EndLineNumber">128</I32>
           <I32 N="EndColumnNumber">101</I32>
           <S N="Text">Write-Host "`nSummary: $successCount successful, $failureCount failed" -ForegroundColor Cyan</S>
-          <I32 N="StartOffset">4656</I32>
-          <I32 N="EndOffset">4748</I32>
+          <I32 N="StartOffset">4657</I32>
+          <I32 N="EndOffset">4749</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -293,8 +293,8 @@
           <I32 N="EndLineNumber">129</I32>
           <I32 N="EndColumnNumber">22</I32>
           <S N="Text">Write-Host ""</S>
-          <I32 N="StartOffset">4758</I32>
-          <I32 N="EndOffset">4771</I32>
+          <I32 N="StartOffset">4759</I32>
+          <I32 N="EndOffset">4772</I32>
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
@@ -339,85 +339,10 @@
   </Obj>
   <Obj RefId="26">
     <TNRef RefId="0" />
-    <ToString>Use space after a comma.</ToString>
-    <Props>
-      <S N="Message">Use space after a comma.</S>
-      <Obj N="Extent" RefId="27">
-        <TNRef RefId="1" />
-        <ToString>,</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\private\Test-JsonConfigExpansion.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
-          <I32 N="StartLineNumber">46</I32>
-          <I32 N="StartColumnNumber">24</I32>
-          <I32 N="EndLineNumber">46</I32>
-          <I32 N="EndColumnNumber">25</I32>
-          <S N="Text">,</S>
-          <I32 N="StartOffset">1280</I32>
-          <I32 N="EndOffset">1281</I32>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentWhitespace</S>
-      <Obj N="Severity" RefId="28">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Test-JsonConfigExpansion.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-JsonConfigExpansion.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="29">
-        <TN RefId="3">
-          <T>System.Collections.Generic.List`1[[Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.CorrectionExtent, Microsoft.Windows.PowerShell.ScriptAnalyzer, Version=1.24.0.0, Culture=neutral, PublicKeyToken=null]]</T>
-          <T>System.Object</T>
-        </TN>
-        <LST>
-          <Obj RefId="30">
-            <TN RefId="4">
-              <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.CorrectionExtent</T>
-              <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.TextEdit</T>
-              <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.Range</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString> </ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\private\Test-JsonConfigExpansion.ps1</S>
-              <S N="Description">Use space before and after binary and assignment operators.</S>
-              <I32 N="StartLineNumber">46</I32>
-              <I32 N="StartColumnNumber">25</I32>
-              <I32 N="EndLineNumber">46</I32>
-              <I32 N="EndColumnNumber">25</I32>
-              <S N="Text"> </S>
-              <Obj N="Lines" RefId="31">
-                <TN RefId="5">
-                  <T>System.String[]</T>
-                  <T>System.Array</T>
-                  <T>System.Object</T>
-                </TN>
-                <LST>
-                  <S> </S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">46</I32>
-      <I32 N="Column">24</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="32">
-    <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="33">
+      <Obj N="Extent" RefId="27">
         <TNRef RefId="1" />
         <ToString>Write-Host "`n=== Environment Variable Expansion Test Results ===" -ForegroundColor Cyan</ToString>
         <Props>
@@ -434,7 +359,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="34">
+      <Obj N="Severity" RefId="28">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -450,12 +375,12 @@
       <I32 N="Column">9</I32>
     </MS>
   </Obj>
-  <Obj RefId="35">
+  <Obj RefId="29">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="36">
+      <Obj N="Extent" RefId="30">
         <TNRef RefId="1" />
         <ToString>Write-Host "File: $ConfigFilePath`n" -ForegroundColor Gray</ToString>
         <Props>
@@ -472,7 +397,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="37">
+      <Obj N="Severity" RefId="31">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -488,12 +413,12 @@
       <I32 N="Column">9</I32>
     </MS>
   </Obj>
-  <Obj RefId="38">
+  <Obj RefId="32">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="39">
+      <Obj N="Extent" RefId="33">
         <TNRef RefId="1" />
         <ToString>Write-Host "$status - XML Content" -ForegroundColor $statusColor</ToString>
         <Props>
@@ -510,7 +435,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="40">
+      <Obj N="Severity" RefId="34">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -526,12 +451,12 @@
       <I32 N="Column">9</I32>
     </MS>
   </Obj>
-  <Obj RefId="41">
+  <Obj RefId="35">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="42">
+      <Obj N="Extent" RefId="36">
         <TNRef RefId="1" />
         <ToString>Write-Host "  Unexpanded pattern found" -ForegroundColor Yellow</ToString>
         <Props>
@@ -548,7 +473,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="43">
+      <Obj N="Severity" RefId="37">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -564,12 +489,12 @@
       <I32 N="Column">13</I32>
     </MS>
   </Obj>
-  <Obj RefId="44">
+  <Obj RefId="38">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="45">
+      <Obj N="Extent" RefId="39">
         <TNRef RefId="1" />
         <ToString>Write-Host "`nSummary: " -ForegroundColor Cyan -NoNewline</ToString>
         <Props>
@@ -586,7 +511,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="46">
+      <Obj N="Severity" RefId="40">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -602,12 +527,12 @@
       <I32 N="Column">9</I32>
     </MS>
   </Obj>
-  <Obj RefId="47">
+  <Obj RefId="41">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="48">
+      <Obj N="Extent" RefId="42">
         <TNRef RefId="1" />
         <ToString>Write-Host "1 failed" -ForegroundColor Cyan</ToString>
         <Props>
@@ -624,7 +549,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="49">
+      <Obj N="Severity" RefId="43">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -640,12 +565,12 @@
       <I32 N="Column">13</I32>
     </MS>
   </Obj>
-  <Obj RefId="50">
+  <Obj RefId="44">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="51">
+      <Obj N="Extent" RefId="45">
         <TNRef RefId="1" />
         <ToString>Write-Host "1 successful, 0 failed" -ForegroundColor Cyan</ToString>
         <Props>
@@ -662,7 +587,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="52">
+      <Obj N="Severity" RefId="46">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -678,12 +603,12 @@
       <I32 N="Column">13</I32>
     </MS>
   </Obj>
-  <Obj RefId="53">
+  <Obj RefId="47">
     <TNRef RefId="0" />
     <ToString>File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</ToString>
     <Props>
       <S N="Message">File 'Test-XmlConfigExpansion.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.</S>
-      <Obj N="Extent" RefId="54">
+      <Obj N="Extent" RefId="48">
         <TNRef RefId="1" />
         <ToString>Write-Host ""</ToString>
         <Props>
@@ -700,7 +625,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSAvoidUsingWriteHost</S>
-      <Obj N="Severity" RefId="55">
+      <Obj N="Severity" RefId="49">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -716,12 +641,73 @@
       <I32 N="Column">9</I32>
     </MS>
   </Obj>
-  <Obj RefId="56">
+  <Obj RefId="50">
+    <TNRef RefId="0" />
+    <ToString>The parameter 'OriginalString' has been declared but not used.</ToString>
+    <Props>
+      <S N="Message">The parameter 'OriginalString' has been declared but not used.</S>
+      <Obj N="Extent" RefId="51">
+        <TNRef RefId="1" />
+        <ToString>$OriginalString</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
+          <I32 N="StartLineNumber">25</I32>
+          <I32 N="StartColumnNumber">17</I32>
+          <I32 N="EndLineNumber">25</I32>
+          <I32 N="EndColumnNumber">32</I32>
+          <S N="Text">$OriginalString</S>
+          <I32 N="StartOffset">678</I32>
+          <I32 N="EndOffset">693</I32>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSReviewUnusedParameter</S>
+      <Obj N="Severity" RefId="52">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
+      <S N="RuleSuppressionID">OriginalString</S>
+      <Nil N="SuggestedCorrections" />
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">25</I32>
+      <I32 N="Column">17</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="53">
+    <TNRef RefId="0" />
+    <ToString>Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</ToString>
+    <Props>
+      <S N="Message">Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</S>
+      <Nil N="Extent" />
+      <S N="RuleName">PSUseBOMForUnicodeEncodedFile</S>
+      <Obj N="Severity" RefId="54">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Nil N="SuggestedCorrections" />
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <Nil N="Line" />
+      <Nil N="Column" />
+    </MS>
+  </Obj>
+  <Obj RefId="55">
     <TNRef RefId="0" />
     <ToString>Close brace does not follow a new line.</ToString>
     <Props>
       <S N="Message">Close brace does not follow a new line.</S>
-      <Obj N="Extent" RefId="57">
+      <Obj N="Extent" RefId="56">
         <TNRef RefId="1" />
         <ToString>}</ToString>
         <Props>
@@ -738,7 +724,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSPlaceCloseBrace</S>
-      <Obj N="Severity" RefId="58">
+      <Obj N="Severity" RefId="57">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -746,11 +732,19 @@
       <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="59">
-        <TNRef RefId="3" />
+      <Obj N="SuggestedCorrections" RefId="58">
+        <TN RefId="3">
+          <T>System.Collections.Generic.List`1[[Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.CorrectionExtent, Microsoft.Windows.PowerShell.ScriptAnalyzer, Version=1.24.0.0, Culture=neutral, PublicKeyToken=null]]</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="60">
-            <TNRef RefId="4" />
+          <Obj RefId="59">
+            <TN RefId="4">
+              <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.CorrectionExtent</T>
+              <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.TextEdit</T>
+              <T>Microsoft.Windows.PowerShell.ScriptAnalyzer.Range</T>
+              <T>System.Object</T>
+            </TN>
             <ToString>}_x000D__x000A_</ToString>
             <Props>
               <S N="File">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
@@ -760,8 +754,12 @@
               <I32 N="EndLineNumber">51</I32>
               <I32 N="EndColumnNumber">10</I32>
               <S N="Text">}_x000D__x000A_</S>
-              <Obj N="Lines" RefId="61">
-                <TNRef RefId="5" />
+              <Obj N="Lines" RefId="60">
+                <TN RefId="5">
+                  <T>System.String[]</T>
+                  <T>System.Array</T>
+                  <T>System.Object</T>
+                </TN>
                 <LST>
                   <S>}</S>
                   <S></S>
@@ -780,73 +778,12 @@
       <I32 N="Column">9</I32>
     </MS>
   </Obj>
-  <Obj RefId="62">
-    <TNRef RefId="0" />
-    <ToString>The parameter 'OriginalString' has been declared but not used.</ToString>
-    <Props>
-      <S N="Message">The parameter 'OriginalString' has been declared but not used.</S>
-      <Obj N="Extent" RefId="63">
-        <TNRef RefId="1" />
-        <ToString>$OriginalString</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.InternalScriptPosition</S>
-          <I32 N="StartLineNumber">25</I32>
-          <I32 N="StartColumnNumber">17</I32>
-          <I32 N="EndLineNumber">25</I32>
-          <I32 N="EndColumnNumber">32</I32>
-          <S N="Text">$OriginalString</S>
-          <I32 N="StartOffset">678</I32>
-          <I32 N="EndOffset">693</I32>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSReviewUnusedParameter</S>
-      <Obj N="Severity" RefId="64">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
-      <S N="RuleSuppressionID">OriginalString</S>
-      <Nil N="SuggestedCorrections" />
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">25</I32>
-      <I32 N="Column">17</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="65">
-    <TNRef RefId="0" />
-    <ToString>Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</ToString>
-    <Props>
-      <S N="Message">Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</S>
-      <Nil N="Extent" />
-      <S N="RuleName">PSUseBOMForUnicodeEncodedFile</S>
-      <Obj N="Severity" RefId="66">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Nil N="SuggestedCorrections" />
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <Nil N="Line" />
-      <Nil N="Column" />
-    </MS>
-  </Obj>
-  <Obj RefId="67">
+  <Obj RefId="61">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="68">
+      <Obj N="Extent" RefId="62">
         <TN RefId="6">
           <T>System.Management.Automation.Language.ScriptExtent</T>
           <T>System.Object</T>
@@ -866,7 +803,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="69">
+      <Obj N="Severity" RefId="63">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -874,10 +811,10 @@
       <S N="ScriptName">Backup-Config.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="70">
+      <Obj N="SuggestedCorrections" RefId="64">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="71">
+          <Obj RefId="65">
             <TNRef RefId="4" />
             <ToString>                if</ToString>
             <Props>
@@ -888,7 +825,7 @@
               <I32 N="EndLineNumber">34</I32>
               <I32 N="EndColumnNumber">15</I32>
               <S N="Text">                if</S>
-              <Obj N="Lines" RefId="72">
+              <Obj N="Lines" RefId="66">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                if</S>
@@ -907,12 +844,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="73">
+  <Obj RefId="67">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="74">
+      <Obj N="Extent" RefId="68">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -929,7 +866,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="75">
+      <Obj N="Severity" RefId="69">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -937,10 +874,10 @@
       <S N="ScriptName">Backup-Config.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="76">
+      <Obj N="SuggestedCorrections" RefId="70">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="77">
+          <Obj RefId="71">
             <TNRef RefId="4" />
             <ToString>                    throw</ToString>
             <Props>
@@ -951,7 +888,7 @@
               <I32 N="EndLineNumber">35</I32>
               <I32 N="EndColumnNumber">22</I32>
               <S N="Text">                    throw</S>
-              <Obj N="Lines" RefId="78">
+              <Obj N="Lines" RefId="72">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                    throw</S>
@@ -970,6 +907,69 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
+  <Obj RefId="73">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="74">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">36</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">36</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="75">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Backup-Config.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="76">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="77">
+            <TNRef RefId="4" />
+            <ToString>                }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">36</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">36</I32>
+              <I32 N="EndColumnNumber">14</I32>
+              <S N="Text">                }</S>
+              <Obj N="Lines" RefId="78">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">36</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
   <Obj RefId="79">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
@@ -982,9 +982,9 @@
           <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">36</I32>
+          <I32 N="StartLineNumber">37</I32>
           <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">36</I32>
+          <I32 N="EndLineNumber">37</I32>
           <I32 N="EndColumnNumber">13</I32>
           <I32 N="StartOffset">0</I32>
           <I32 N="EndOffset">0</I32>
@@ -1005,69 +1005,6 @@
         <LST>
           <Obj RefId="83">
             <TNRef RefId="4" />
-            <ToString>                }</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">36</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">36</I32>
-              <I32 N="EndColumnNumber">14</I32>
-              <S N="Text">                }</S>
-              <Obj N="Lines" RefId="84">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                }</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">36</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="85">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="86">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">37</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">37</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="87">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Backup-Config.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="88">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="89">
-            <TNRef RefId="4" />
             <ToString>                return</ToString>
             <Props>
               <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
@@ -1077,7 +1014,7 @@
               <I32 N="EndLineNumber">37</I32>
               <I32 N="EndColumnNumber">19</I32>
               <S N="Text">                return</S>
-              <Obj N="Lines" RefId="90">
+              <Obj N="Lines" RefId="84">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                return</S>
@@ -1096,12 +1033,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="91">
+  <Obj RefId="85">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="92">
+      <Obj N="Extent" RefId="86">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -1118,7 +1055,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="93">
+      <Obj N="Severity" RefId="87">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -1126,10 +1063,10 @@
       <S N="ScriptName">Backup-Config.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="94">
+      <Obj N="SuggestedCorrections" RefId="88">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="95">
+          <Obj RefId="89">
             <TNRef RefId="4" />
             <ToString>            }</ToString>
             <Props>
@@ -1140,7 +1077,7 @@
               <I32 N="EndLineNumber">38</I32>
               <I32 N="EndColumnNumber">10</I32>
               <S N="Text">            }</S>
-              <Obj N="Lines" RefId="96">
+              <Obj N="Lines" RefId="90">
                 <TNRef RefId="5" />
                 <LST>
                   <S>            }</S>
@@ -1159,12 +1096,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="97">
+  <Obj RefId="91">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="98">
+      <Obj N="Extent" RefId="92">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -1181,7 +1118,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="99">
+      <Obj N="Severity" RefId="93">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -1189,10 +1126,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="100">
+      <Obj N="SuggestedCorrections" RefId="94">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="101">
+          <Obj RefId="95">
             <TNRef RefId="4" />
             <ToString>                if</ToString>
             <Props>
@@ -1203,7 +1140,7 @@
               <I32 N="EndLineNumber">33</I32>
               <I32 N="EndColumnNumber">15</I32>
               <S N="Text">                if</S>
-              <Obj N="Lines" RefId="102">
+              <Obj N="Lines" RefId="96">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                if</S>
@@ -1222,12 +1159,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="103">
+  <Obj RefId="97">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="104">
+      <Obj N="Extent" RefId="98">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -1244,7 +1181,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="105">
+      <Obj N="Severity" RefId="99">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -1252,10 +1189,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="106">
+      <Obj N="SuggestedCorrections" RefId="100">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="107">
+          <Obj RefId="101">
             <TNRef RefId="4" />
             <ToString>                    throw</ToString>
             <Props>
@@ -1266,7 +1203,7 @@
               <I32 N="EndLineNumber">34</I32>
               <I32 N="EndColumnNumber">22</I32>
               <S N="Text">                    throw</S>
-              <Obj N="Lines" RefId="108">
+              <Obj N="Lines" RefId="102">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                    throw</S>
@@ -1285,6 +1222,69 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
+  <Obj RefId="103">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="104">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">35</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">35</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="105">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="106">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="107">
+            <TNRef RefId="4" />
+            <ToString>                }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">35</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">35</I32>
+              <I32 N="EndColumnNumber">14</I32>
+              <S N="Text">                }</S>
+              <Obj N="Lines" RefId="108">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">35</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
   <Obj RefId="109">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
@@ -1297,9 +1297,9 @@
           <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">35</I32>
+          <I32 N="StartLineNumber">36</I32>
           <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">35</I32>
+          <I32 N="EndLineNumber">36</I32>
           <I32 N="EndColumnNumber">13</I32>
           <I32 N="StartOffset">0</I32>
           <I32 N="EndOffset">0</I32>
@@ -1320,19 +1320,19 @@
         <LST>
           <Obj RefId="113">
             <TNRef RefId="4" />
-            <ToString>                }</ToString>
+            <ToString>                $extension</ToString>
             <Props>
               <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
               <Nil N="Description" />
-              <I32 N="StartLineNumber">35</I32>
+              <I32 N="StartLineNumber">36</I32>
               <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">35</I32>
-              <I32 N="EndColumnNumber">14</I32>
-              <S N="Text">                }</S>
+              <I32 N="EndLineNumber">36</I32>
+              <I32 N="EndColumnNumber">23</I32>
+              <S N="Text">                $extension</S>
               <Obj N="Lines" RefId="114">
                 <TNRef RefId="5" />
                 <LST>
-                  <S>                }</S>
+                  <S>                $extension</S>
                 </LST>
               </Obj>
               <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
@@ -1344,7 +1344,7 @@
       <B N="IsSuppressed">false</B>
     </Props>
     <MS>
-      <I32 N="Line">35</I32>
+      <I32 N="Line">36</I32>
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
@@ -1360,9 +1360,9 @@
           <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">36</I32>
+          <I32 N="StartLineNumber">37</I32>
           <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">36</I32>
+          <I32 N="EndLineNumber">37</I32>
           <I32 N="EndColumnNumber">13</I32>
           <I32 N="StartOffset">0</I32>
           <I32 N="EndOffset">0</I32>
@@ -1383,69 +1383,6 @@
         <LST>
           <Obj RefId="119">
             <TNRef RefId="4" />
-            <ToString>                $extension</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">36</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">36</I32>
-              <I32 N="EndColumnNumber">23</I32>
-              <S N="Text">                $extension</S>
-              <Obj N="Lines" RefId="120">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                $extension</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">36</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="121">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="122">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">37</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">37</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="123">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="124">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="125">
-            <TNRef RefId="4" />
             <ToString>                if</ToString>
             <Props>
               <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
@@ -1455,7 +1392,7 @@
               <I32 N="EndLineNumber">37</I32>
               <I32 N="EndColumnNumber">15</I32>
               <S N="Text">                if</S>
-              <Obj N="Lines" RefId="126">
+              <Obj N="Lines" RefId="120">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                if</S>
@@ -1474,12 +1411,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="127">
+  <Obj RefId="121">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="128">
+      <Obj N="Extent" RefId="122">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -1496,7 +1433,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="129">
+      <Obj N="Severity" RefId="123">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -1504,10 +1441,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="130">
+      <Obj N="SuggestedCorrections" RefId="124">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="131">
+          <Obj RefId="125">
             <TNRef RefId="4" />
             <ToString>                    throw</ToString>
             <Props>
@@ -1518,7 +1455,7 @@
               <I32 N="EndLineNumber">38</I32>
               <I32 N="EndColumnNumber">22</I32>
               <S N="Text">                    throw</S>
-              <Obj N="Lines" RefId="132">
+              <Obj N="Lines" RefId="126">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                    throw</S>
@@ -1537,6 +1474,69 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
+  <Obj RefId="127">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="128">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">39</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">39</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="129">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="130">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="131">
+            <TNRef RefId="4" />
+            <ToString>                }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">39</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">39</I32>
+              <I32 N="EndColumnNumber">14</I32>
+              <S N="Text">                }</S>
+              <Obj N="Lines" RefId="132">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">39</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
   <Obj RefId="133">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
@@ -1549,9 +1549,9 @@
           <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">39</I32>
+          <I32 N="StartLineNumber">40</I32>
           <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">39</I32>
+          <I32 N="EndLineNumber">40</I32>
           <I32 N="EndColumnNumber">13</I32>
           <I32 N="StartOffset">0</I32>
           <I32 N="EndOffset">0</I32>
@@ -1572,69 +1572,6 @@
         <LST>
           <Obj RefId="137">
             <TNRef RefId="4" />
-            <ToString>                }</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">39</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">39</I32>
-              <I32 N="EndColumnNumber">14</I32>
-              <S N="Text">                }</S>
-              <Obj N="Lines" RefId="138">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                }</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">39</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="139">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="140">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">40</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">40</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="141">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="142">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="143">
-            <TNRef RefId="4" />
             <ToString>                return</ToString>
             <Props>
               <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
@@ -1644,7 +1581,7 @@
               <I32 N="EndLineNumber">40</I32>
               <I32 N="EndColumnNumber">19</I32>
               <S N="Text">                return</S>
-              <Obj N="Lines" RefId="144">
+              <Obj N="Lines" RefId="138">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                return</S>
@@ -1663,12 +1600,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="145">
+  <Obj RefId="139">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="146">
+      <Obj N="Extent" RefId="140">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -1685,7 +1622,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="147">
+      <Obj N="Severity" RefId="141">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -1693,10 +1630,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="148">
+      <Obj N="SuggestedCorrections" RefId="142">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="149">
+          <Obj RefId="143">
             <TNRef RefId="4" />
             <ToString>            }</ToString>
             <Props>
@@ -1707,7 +1644,7 @@
               <I32 N="EndLineNumber">41</I32>
               <I32 N="EndColumnNumber">10</I32>
               <S N="Text">            }</S>
-              <Obj N="Lines" RefId="150">
+              <Obj N="Lines" RefId="144">
                 <TNRef RefId="5" />
                 <LST>
                   <S>            }</S>
