@@ -296,8 +296,30 @@ function Invoke-Tests {
             Write-BuildLog "All tests passed ($($testResults.PassedCount) tests)" -Level Success
         }
 
-        # Codecov will handle coverage report generation from coverage.xml
-        Write-BuildLog "Code coverage results available at results/coverage.xml" -Level Info
+        # Generate HTML coverage report with ReportGenerator
+        Write-BuildLog "Generating coverage report with ReportGenerator..." -Level Info
+        try {
+            $coverageXmlPath = Join-Path -Path $resultsPath -ChildPath 'coverage.xml'
+            if (Test-Path -LiteralPath $coverageXmlPath) {
+                $reportDir = Join-Path -Path $resultsPath -ChildPath 'coverage-report'
+                
+                # Check if reportgenerator is available
+                $reportGenerator = Get-Command reportgenerator -ErrorAction SilentlyContinue
+                if ($reportGenerator) {
+                    reportgenerator -reports:$coverageXmlPath -targetdir:$reportDir -reporttypes:Html > $null
+                    Write-BuildLog "Coverage report generated at $reportDir/index.html" -Level Success
+                }
+                else {
+                    Write-BuildLog "ReportGenerator not installed. Install with: dotnet tool install -g dotnet-reportgenerator-globaltool" -Level Warning
+                }
+            }
+            else {
+                Write-BuildLog "Coverage file not found: $coverageXmlPath" -Level Warning
+            }
+        }
+        catch {
+            Write-BuildLog "Error generating coverage report: $_" -Level Warning
+        }
     }
     catch {
         Write-BuildLog "Test execution failed: $_" -Level Error
