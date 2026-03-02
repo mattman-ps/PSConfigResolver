@@ -853,6 +853,321 @@
         </TN>
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">34</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">34</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="69">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Backup-Config.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="70">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="71">
+            <TNRef RefId="4" />
+            <ToString>                if</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">34</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">34</I32>
+              <I32 N="EndColumnNumber">15</I32>
+              <S N="Text">                if</S>
+              <Obj N="Lines" RefId="72">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                if</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">34</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="73">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="74">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">35</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">35</I32>
+          <I32 N="EndColumnNumber">17</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">                </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="75">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Backup-Config.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="76">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="77">
+            <TNRef RefId="4" />
+            <ToString>                    throw</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">35</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">35</I32>
+              <I32 N="EndColumnNumber">22</I32>
+              <S N="Text">                    throw</S>
+              <Obj N="Lines" RefId="78">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                    throw</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">35</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="79">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="80">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">36</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">36</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="81">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Backup-Config.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="82">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="83">
+            <TNRef RefId="4" />
+            <ToString>                }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">36</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">36</I32>
+              <I32 N="EndColumnNumber">14</I32>
+              <S N="Text">                }</S>
+              <Obj N="Lines" RefId="84">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">36</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="85">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="86">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">37</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">37</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="87">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Backup-Config.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="88">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="89">
+            <TNRef RefId="4" />
+            <ToString>                return</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">37</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">37</I32>
+              <I32 N="EndColumnNumber">19</I32>
+              <S N="Text">                return</S>
+              <Obj N="Lines" RefId="90">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                return</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">37</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="91">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="92">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">38</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">38</I32>
+          <I32 N="EndColumnNumber">9</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">        </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="93">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Backup-Config.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="94">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="95">
+            <TNRef RefId="4" />
+            <ToString>            }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Backup-Config.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">38</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">38</I32>
+              <I32 N="EndColumnNumber">10</I32>
+              <S N="Text">            }</S>
+              <Obj N="Lines" RefId="96">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>            }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">38</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="97">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="98">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
           <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
@@ -866,7 +1181,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="69">
+      <Obj N="Severity" RefId="99">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -874,10 +1189,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="70">
+      <Obj N="SuggestedCorrections" RefId="100">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="71">
+          <Obj RefId="101">
             <TNRef RefId="4" />
             <ToString>                if</ToString>
             <Props>
@@ -888,7 +1203,7 @@
               <I32 N="EndLineNumber">33</I32>
               <I32 N="EndColumnNumber">15</I32>
               <S N="Text">                if</S>
-              <Obj N="Lines" RefId="72">
+              <Obj N="Lines" RefId="102">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                if</S>
@@ -907,12 +1222,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="73">
+  <Obj RefId="103">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="74">
+      <Obj N="Extent" RefId="104">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -929,7 +1244,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="75">
+      <Obj N="Severity" RefId="105">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -937,10 +1252,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="76">
+      <Obj N="SuggestedCorrections" RefId="106">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="77">
+          <Obj RefId="107">
             <TNRef RefId="4" />
             <ToString>                    throw</ToString>
             <Props>
@@ -951,7 +1266,7 @@
               <I32 N="EndLineNumber">34</I32>
               <I32 N="EndColumnNumber">22</I32>
               <S N="Text">                    throw</S>
-              <Obj N="Lines" RefId="78">
+              <Obj N="Lines" RefId="108">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                    throw</S>
@@ -970,321 +1285,6 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="79">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="80">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">35</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">35</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="81">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="82">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="83">
-            <TNRef RefId="4" />
-            <ToString>                }</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">35</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">35</I32>
-              <I32 N="EndColumnNumber">14</I32>
-              <S N="Text">                }</S>
-              <Obj N="Lines" RefId="84">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                }</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">35</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="85">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="86">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">36</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">36</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="87">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="88">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="89">
-            <TNRef RefId="4" />
-            <ToString>                $extension</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">36</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">36</I32>
-              <I32 N="EndColumnNumber">23</I32>
-              <S N="Text">                $extension</S>
-              <Obj N="Lines" RefId="90">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                $extension</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">36</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="91">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="92">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">37</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">37</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="93">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="94">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="95">
-            <TNRef RefId="4" />
-            <ToString>                if</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">37</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">37</I32>
-              <I32 N="EndColumnNumber">15</I32>
-              <S N="Text">                if</S>
-              <Obj N="Lines" RefId="96">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                if</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">37</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="97">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="98">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">38</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">38</I32>
-          <I32 N="EndColumnNumber">17</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">                </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="99">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="100">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="101">
-            <TNRef RefId="4" />
-            <ToString>                    throw</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">38</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">38</I32>
-              <I32 N="EndColumnNumber">22</I32>
-              <S N="Text">                    throw</S>
-              <Obj N="Lines" RefId="102">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                    throw</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">38</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="103">
-    <TNRef RefId="0" />
-    <ToString>Indentation not consistent</ToString>
-    <Props>
-      <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="104">
-        <TNRef RefId="6" />
-        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
-        <Props>
-          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">39</I32>
-          <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">39</I32>
-          <I32 N="EndColumnNumber">13</I32>
-          <I32 N="StartOffset">0</I32>
-          <I32 N="EndOffset">0</I32>
-          <S N="Text">            </S>
-        </Props>
-      </Obj>
-      <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="105">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="106">
-        <TNRef RefId="3" />
-        <LST>
-          <Obj RefId="107">
-            <TNRef RefId="4" />
-            <ToString>                }</ToString>
-            <Props>
-              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
-              <Nil N="Description" />
-              <I32 N="StartLineNumber">39</I32>
-              <I32 N="StartColumnNumber">1</I32>
-              <I32 N="EndLineNumber">39</I32>
-              <I32 N="EndColumnNumber">14</I32>
-              <S N="Text">                }</S>
-              <Obj N="Lines" RefId="108">
-                <TNRef RefId="5" />
-                <LST>
-                  <S>                }</S>
-                </LST>
-              </Obj>
-              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
-            </Props>
-          </Obj>
-        </LST>
-      </Obj>
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <I32 N="Line">39</I32>
-      <I32 N="Column">1</I32>
-    </MS>
-  </Obj>
   <Obj RefId="109">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
@@ -1297,9 +1297,9 @@
           <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
           <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
           <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
-          <I32 N="StartLineNumber">40</I32>
+          <I32 N="StartLineNumber">35</I32>
           <I32 N="StartColumnNumber">1</I32>
-          <I32 N="EndLineNumber">40</I32>
+          <I32 N="EndLineNumber">35</I32>
           <I32 N="EndColumnNumber">13</I32>
           <I32 N="StartOffset">0</I32>
           <I32 N="EndOffset">0</I32>
@@ -1320,6 +1320,321 @@
         <LST>
           <Obj RefId="113">
             <TNRef RefId="4" />
+            <ToString>                }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">35</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">35</I32>
+              <I32 N="EndColumnNumber">14</I32>
+              <S N="Text">                }</S>
+              <Obj N="Lines" RefId="114">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">35</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="115">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="116">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">36</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">36</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="117">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="118">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="119">
+            <TNRef RefId="4" />
+            <ToString>                $extension</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">36</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">36</I32>
+              <I32 N="EndColumnNumber">23</I32>
+              <S N="Text">                $extension</S>
+              <Obj N="Lines" RefId="120">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                $extension</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">36</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="121">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="122">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">37</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">37</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="123">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="124">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="125">
+            <TNRef RefId="4" />
+            <ToString>                if</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">37</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">37</I32>
+              <I32 N="EndColumnNumber">15</I32>
+              <S N="Text">                if</S>
+              <Obj N="Lines" RefId="126">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                if</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">37</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="127">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="128">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">38</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">38</I32>
+          <I32 N="EndColumnNumber">17</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">                </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="129">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="130">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="131">
+            <TNRef RefId="4" />
+            <ToString>                    throw</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">38</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">38</I32>
+              <I32 N="EndColumnNumber">22</I32>
+              <S N="Text">                    throw</S>
+              <Obj N="Lines" RefId="132">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                    throw</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">38</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="133">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="134">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">39</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">39</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="135">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="136">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="137">
+            <TNRef RefId="4" />
+            <ToString>                }</ToString>
+            <Props>
+              <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+              <Nil N="Description" />
+              <I32 N="StartLineNumber">39</I32>
+              <I32 N="StartColumnNumber">1</I32>
+              <I32 N="EndLineNumber">39</I32>
+              <I32 N="EndColumnNumber">14</I32>
+              <S N="Text">                }</S>
+              <Obj N="Lines" RefId="138">
+                <TNRef RefId="5" />
+                <LST>
+                  <S>                }</S>
+                </LST>
+              </Obj>
+              <S N="Start">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+              <S N="End">Microsoft.Windows.PowerShell.ScriptAnalyzer.Position</S>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <I32 N="Line">39</I32>
+      <I32 N="Column">1</I32>
+    </MS>
+  </Obj>
+  <Obj RefId="139">
+    <TNRef RefId="0" />
+    <ToString>Indentation not consistent</ToString>
+    <Props>
+      <S N="Message">Indentation not consistent</S>
+      <Obj N="Extent" RefId="140">
+        <TNRef RefId="6" />
+        <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
+        <Props>
+          <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+          <S N="StartScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <S N="EndScriptPosition">System.Management.Automation.Language.ScriptPosition</S>
+          <I32 N="StartLineNumber">40</I32>
+          <I32 N="StartColumnNumber">1</I32>
+          <I32 N="EndLineNumber">40</I32>
+          <I32 N="EndColumnNumber">13</I32>
+          <I32 N="StartOffset">0</I32>
+          <I32 N="EndOffset">0</I32>
+          <S N="Text">            </S>
+        </Props>
+      </Obj>
+      <S N="RuleName">PSUseConsistentIndentation</S>
+      <Obj N="Severity" RefId="141">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Get-ExpandedConfig.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Obj N="SuggestedCorrections" RefId="142">
+        <TNRef RefId="3" />
+        <LST>
+          <Obj RefId="143">
+            <TNRef RefId="4" />
             <ToString>                return</ToString>
             <Props>
               <S N="File">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
@@ -1329,7 +1644,7 @@
               <I32 N="EndLineNumber">40</I32>
               <I32 N="EndColumnNumber">19</I32>
               <S N="Text">                return</S>
-              <Obj N="Lines" RefId="114">
+              <Obj N="Lines" RefId="144">
                 <TNRef RefId="5" />
                 <LST>
                   <S>                return</S>
@@ -1348,12 +1663,12 @@
       <I32 N="Column">1</I32>
     </MS>
   </Obj>
-  <Obj RefId="115">
+  <Obj RefId="145">
     <TNRef RefId="0" />
     <ToString>Indentation not consistent</ToString>
     <Props>
       <S N="Message">Indentation not consistent</S>
-      <Obj N="Extent" RefId="116">
+      <Obj N="Extent" RefId="146">
         <TNRef RefId="6" />
         <ToString>System.Management.Automation.Language.ScriptExtent</ToString>
         <Props>
@@ -1370,7 +1685,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSUseConsistentIndentation</S>
-      <Obj N="Severity" RefId="117">
+      <Obj N="Severity" RefId="147">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -1378,10 +1693,10 @@
       <S N="ScriptName">Get-ExpandedConfig.ps1</S>
       <S N="ScriptPath">C:\apps\PSConfigResolver\src\public\Get-ExpandedConfig.ps1</S>
       <Nil N="RuleSuppressionID" />
-      <Obj N="SuggestedCorrections" RefId="118">
+      <Obj N="SuggestedCorrections" RefId="148">
         <TNRef RefId="3" />
         <LST>
-          <Obj RefId="119">
+          <Obj RefId="149">
             <TNRef RefId="4" />
             <ToString>            }</ToString>
             <Props>
@@ -1392,7 +1707,7 @@
               <I32 N="EndLineNumber">41</I32>
               <I32 N="EndColumnNumber">10</I32>
               <S N="Text">            }</S>
-              <Obj N="Lines" RefId="120">
+              <Obj N="Lines" RefId="150">
                 <TNRef RefId="5" />
                 <LST>
                   <S>            }</S>

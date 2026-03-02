@@ -1,55 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2026-03-01" time="21:27:36">
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2026-03-01" time="21:32:13">
   <environment clr-version="9.0.10" cwd="C:\apps\PSConfigResolver" user-domain="MATTDEV" user="mhilb" os-version="10.0.26200" machine-name="MATTDEV" nunit-version="2.5.8.0" platform="Microsoft Windows 11 Pro|C:\windows|\Device\Harddisk0\Partition3" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="0.2216" asserts="0" description="Pester">
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="0.2073" asserts="0" description="Pester">
     <results>
-      <test-suite type="TestFixture" name="C:\apps\PSConfigResolver\tests\ExpandConfig.tests.ps1" executed="True" result="Success" success="True" time="0.2216" asserts="0" description="C:\apps\PSConfigResolver\tests\ExpandConfig.tests.ps1">
+      <test-suite type="TestFixture" name="C:\apps\PSConfigResolver\tests\ExpandConfig.tests.ps1" executed="True" result="Success" success="True" time="0.2073" asserts="0" description="C:\apps\PSConfigResolver\tests\ExpandConfig.tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-ExpandedConfig" executed="True" result="Success" success="True" time="0.1632" asserts="0" description="Get-ExpandedConfig">
+          <test-suite type="TestFixture" name="Get-ExpandedConfig" executed="True" result="Success" success="True" time="0.1539" asserts="0" description="Get-ExpandedConfig">
             <results>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.Parameter Validation" executed="True" result="Success" success="True" time="0.014" asserts="0" description="Get-ExpandedConfig.Parameter Validation">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.Parameter Validation" executed="True" result="Success" success="True" time="0.016" asserts="0" description="Get-ExpandedConfig.Parameter Validation">
                 <results>
-                  <test-case description="should reject non-existent files" name="Get-ExpandedConfig.Parameter Validation.should reject non-existent files" time="0.007" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should reject files without .json or .xml extension" name="Get-ExpandedConfig.Parameter Validation.should reject files without .json or .xml extension" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should reject non-existent files" name="Get-ExpandedConfig.Parameter Validation.should reject non-existent files" time="0.0071" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should reject files without .json or .xml extension" name="Get-ExpandedConfig.Parameter Validation.should reject files without .json or .xml extension" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.JSON File Processing" executed="True" result="Success" success="True" time="0.0559" asserts="0" description="Get-ExpandedConfig.JSON File Processing">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.JSON File Processing" executed="True" result="Success" success="True" time="0.0566" asserts="0" description="Get-ExpandedConfig.JSON File Processing">
                 <results>
-                  <test-case description="should read and expand JSON configuration" name="Get-ExpandedConfig.JSON File Processing.should read and expand JSON configuration" time="0.0102" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should expand environment variables in nested JSON objects" name="Get-ExpandedConfig.JSON File Processing.should expand environment variables in nested JSON objects" time="0.0118" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should expand environment variables in JSON arrays" name="Get-ExpandedConfig.JSON File Processing.should expand environment variables in JSON arrays" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should preserve unexpanded variables in nested JSON values" name="Get-ExpandedConfig.JSON File Processing.should preserve unexpanded variables in nested JSON values" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should preserve non-string value types in JSON" name="Get-ExpandedConfig.JSON File Processing.should preserve non-string value types in JSON" time="0.007" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should read and expand JSON configuration" name="Get-ExpandedConfig.JSON File Processing.should read and expand JSON configuration" time="0.0146" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should expand environment variables in nested JSON objects" name="Get-ExpandedConfig.JSON File Processing.should expand environment variables in nested JSON objects" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should expand environment variables in JSON arrays" name="Get-ExpandedConfig.JSON File Processing.should expand environment variables in JSON arrays" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should preserve unexpanded variables in nested JSON values" name="Get-ExpandedConfig.JSON File Processing.should preserve unexpanded variables in nested JSON values" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should preserve non-string value types in JSON" name="Get-ExpandedConfig.JSON File Processing.should preserve non-string value types in JSON" time="0.0097" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.XML File Processing" executed="True" result="Success" success="True" time="0.0637" asserts="0" description="Get-ExpandedConfig.XML File Processing">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.XML File Processing" executed="True" result="Success" success="True" time="0.063" asserts="0" description="Get-ExpandedConfig.XML File Processing">
                 <results>
-                  <test-case description="should read and expand XML configuration" name="Get-ExpandedConfig.XML File Processing.should read and expand XML configuration" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should read and expand XML configuration" name="Get-ExpandedConfig.XML File Processing.should read and expand XML configuration" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.Error Handling" executed="True" result="Success" success="True" time="0.088" asserts="0" description="Get-ExpandedConfig.Error Handling">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.Error Handling" executed="True" result="Success" success="True" time="0.0817" asserts="0" description="Get-ExpandedConfig.Error Handling">
                 <results>
-                  <test-case description="should throw for invalid JSON content" name="Get-ExpandedConfig.Error Handling.should throw for invalid JSON content" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should throw for invalid XML content" name="Get-ExpandedConfig.Error Handling.should throw for invalid XML content" time="0.0071" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should throw for empty JSON files" name="Get-ExpandedConfig.Error Handling.should throw for empty JSON files" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should throw for invalid JSON content" name="Get-ExpandedConfig.Error Handling.should throw for invalid JSON content" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should throw for invalid XML content" name="Get-ExpandedConfig.Error Handling.should throw for invalid XML content" time="0.006" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should throw for empty JSON files" name="Get-ExpandedConfig.Error Handling.should throw for empty JSON files" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.JSON Edge Cases" executed="True" result="Success" success="True" time="0.1051" asserts="0" description="Get-ExpandedConfig.JSON Edge Cases">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.JSON Edge Cases" executed="True" result="Success" success="True" time="0.0985" asserts="0" description="Get-ExpandedConfig.JSON Edge Cases">
                 <results>
-                  <test-case description="should expand deep nested JSON and preserve null and primitive values" name="Get-ExpandedConfig.JSON Edge Cases.should expand deep nested JSON and preserve null and primitive values" time="0.0142" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should expand deep nested JSON and preserve null and primitive values" name="Get-ExpandedConfig.JSON Edge Cases.should expand deep nested JSON and preserve null and primitive values" time="0.0085" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.Test Parameter" executed="True" result="Success" success="True" time="0.1439" asserts="0" description="Get-ExpandedConfig.Test Parameter">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.Test Parameter" executed="True" result="Success" success="True" time="0.1371" asserts="0" description="Get-ExpandedConfig.Test Parameter">
                 <results>
-                  <test-case description="should accept -Test switch" name="Get-ExpandedConfig.Test Parameter.should accept -Test switch" time="0.0131" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should return config even with -Test parameter" name="Get-ExpandedConfig.Test Parameter.should return config even with -Test parameter" time="0.0104" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should report nested path for unexpanded variables" name="Get-ExpandedConfig.Test Parameter.should report nested path for unexpanded variables" time="0.0115" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should accept -Test switch" name="Get-ExpandedConfig.Test Parameter.should accept -Test switch" time="0.0138" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should return config even with -Test parameter" name="Get-ExpandedConfig.Test Parameter.should return config even with -Test parameter" time="0.0122" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should report nested path for unexpanded variables" name="Get-ExpandedConfig.Test Parameter.should report nested path for unexpanded variables" time="0.0103" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="Get-ExpandedConfig.Pipeline Support" executed="True" result="Success" success="True" time="0.1531" asserts="0" description="Get-ExpandedConfig.Pipeline Support">
+              <test-suite type="TestFixture" name="Get-ExpandedConfig.Pipeline Support" executed="True" result="Success" success="True" time="0.1444" asserts="0" description="Get-ExpandedConfig.Pipeline Support">
                 <results>
-                  <test-case description="should accept ConfigFilePath via pipeline" name="Get-ExpandedConfig.Pipeline Support.should accept ConfigFilePath via pipeline" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="should accept ConfigFilePath via pipeline" name="Get-ExpandedConfig.Pipeline Support.should accept ConfigFilePath via pipeline" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
                 </results>
               </test-suite>
             </results>
