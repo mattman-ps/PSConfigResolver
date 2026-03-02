@@ -782,10 +782,33 @@
   </Obj>
   <Obj RefId="62">
     <TNRef RefId="0" />
+    <ToString>Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</ToString>
+    <Props>
+      <S N="Message">Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</S>
+      <Nil N="Extent" />
+      <S N="RuleName">PSUseBOMForUnicodeEncodedFile</S>
+      <Obj N="Severity" RefId="63">
+        <TNRef RefId="2" />
+        <ToString>Warning</ToString>
+        <U32>1</U32>
+      </Obj>
+      <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
+      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
+      <Nil N="RuleSuppressionID" />
+      <Nil N="SuggestedCorrections" />
+      <B N="IsSuppressed">false</B>
+    </Props>
+    <MS>
+      <Nil N="Line" />
+      <Nil N="Column" />
+    </MS>
+  </Obj>
+  <Obj RefId="64">
+    <TNRef RefId="0" />
     <ToString>The parameter 'OriginalString' has been declared but not used.</ToString>
     <Props>
       <S N="Message">The parameter 'OriginalString' has been declared but not used.</S>
-      <Obj N="Extent" RefId="63">
+      <Obj N="Extent" RefId="65">
         <TNRef RefId="1" />
         <ToString>$OriginalString</ToString>
         <Props>
@@ -802,7 +825,7 @@
         </Props>
       </Obj>
       <S N="RuleName">PSReviewUnusedParameter</S>
-      <Obj N="Severity" RefId="64">
+      <Obj N="Severity" RefId="66">
         <TNRef RefId="2" />
         <ToString>Warning</ToString>
         <U32>1</U32>
@@ -816,29 +839,6 @@
     <MS>
       <I32 N="Line">25</I32>
       <I32 N="Column">17</I32>
-    </MS>
-  </Obj>
-  <Obj RefId="65">
-    <TNRef RefId="0" />
-    <ToString>Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</ToString>
-    <Props>
-      <S N="Message">Missing BOM encoding for non-ASCII encoded file 'Test-XmlConfigExpansion.ps1'</S>
-      <Nil N="Extent" />
-      <S N="RuleName">PSUseBOMForUnicodeEncodedFile</S>
-      <Obj N="Severity" RefId="66">
-        <TNRef RefId="2" />
-        <ToString>Warning</ToString>
-        <U32>1</U32>
-      </Obj>
-      <S N="ScriptName">Test-XmlConfigExpansion.ps1</S>
-      <S N="ScriptPath">C:\apps\PSConfigResolver\src\private\Test-XmlConfigExpansion.ps1</S>
-      <Nil N="RuleSuppressionID" />
-      <Nil N="SuggestedCorrections" />
-      <B N="IsSuppressed">false</B>
-    </Props>
-    <MS>
-      <Nil N="Line" />
-      <Nil N="Column" />
     </MS>
   </Obj>
   <Obj RefId="67">

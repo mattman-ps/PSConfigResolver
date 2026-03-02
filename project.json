@@ -7,8 +7,18 @@
     "Author": "mattman-ps",
     "PowerShellHostVersion": "7.4",
     "GUID": "65463282-154b-4236-a415-1a3596441b50",
-    "Tags": [],
-    "ProjectUri": ""
+    "Tags": [
+      "Configuration",
+      "JSON",
+      "XML",
+      "EnvironmentVariables",
+      "ConfigurationManagement",
+      "Utilities",
+      "PowerShell",
+      "Expansion"
+    ],
+    "ProjectUri": "https://github.com/mattman-ps/PSConfigResolver",
+    "ReleaseNotes": "v0.0.1 (2026-03-01) - Initial release\n- Get-ExpandedConfig function to read and expand JSON/XML configuration files\n- Automatic file type detection based on extension\n- Optional test report parameter for validation\n- Environment variable expansion with recursive support\n- Comprehensive test suite with 16+ tests\n- Sample configuration files demonstrating functionality"
   },
   "Pester": {
     "TestResult": {
