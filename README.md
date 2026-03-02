@@ -6,6 +6,96 @@ A PowerShell module for reading configuration files (JSON and XML) and expanding
 
 This module provides a simple yet powerful way to work with configuration files that contain environment variable references. It automatically detects the file type and expands variables using PowerShell's built-in mechanisms. The module follows PowerShell best practices and includes comprehensive testing.
 
+## Quick Start Guide
+
+Get up and running in just a few steps:
+
+### Prerequisites
+
+- PowerShell 5.0 or later
+- Windows environment
+- A JSON or XML configuration file
+
+### Installation
+
+1. Clone or download the repository:
+```powershell
+git clone https://github.com/mattman-ps/PSConfigResolver.git
+cd PSConfigResolver
+```
+
+2. Import the module:
+```powershell
+Import-Module .\dist\PSConfigResolver
+```
+
+Or load the function directly:
+```powershell
+. .\src\public\Get-ExpandedConfig.ps1
+```
+
+### First Usage - 30 Seconds
+
+1. Create a simple configuration file (e.g., `config.json`):
+```json
+{
+    "AppName": "MyApp",
+    "LogPath": "%TEMP%\MyApp\logs",
+    "DataPath": "%USERPROFILE%\AppData\MyApp\data"
+}
+```
+
+2. Load and expand it:
+```powershell
+$config = Get-ExpandedConfig -ConfigFilePath ".\config.json"
+```
+
+3. Access the values:
+```powershell
+Write-Host "App: $($config.AppName)"
+Write-Host "Logs: $($config.LogPath)"
+Write-Host "Data: $($config.DataPath)"
+```
+
+**Output:**
+```
+App: MyApp
+Logs: C:\Users\username\AppData\Local\Temp\MyApp\logs
+Data: C:\Users\username\AppData\MyApp\data
+```
+
+### Validate Configuration
+
+View detailed expansion results with the `-Test` parameter:
+```powershell
+Get-ExpandedConfig -ConfigFilePath ".\config.json" -Test
+```
+
+### More Examples
+
+**Working with XML:**
+```powershell
+$xmlConfig = Get-ExpandedConfig -ConfigFilePath ".\config.xml"
+```
+
+**Pipeline Support:**
+```powershell
+".\config.json" | Get-ExpandedConfig | Select-Object AppName, LogPath
+```
+
+**Batch Processing:**
+```powershell
+Get-ChildItem -Path ".\configs" -Filter "*.json" |
+    ForEach-Object { Get-ExpandedConfig -ConfigFilePath $_.FullName }
+```
+
+### What's Next?
+
+- See [Usage Examples](#usage-examples) for more detailed scenarios
+- Read [Configuration File Formats](#configuration-file-formats) to understand supported formats
+- Check [Best Practices](#best-practices) for production use
+- Review [Troubleshooting](#troubleshooting) if you encounter issues
+
 ## Functions
 
 ### Get-ExpandedConfig (Public)
@@ -244,16 +334,16 @@ Invoke-Pester -Path ".\tests\ExpandConfig.tests.ps1" -Container @{
 
 ## Installation
 
-1. Clone or download the repository
-2. Load the main function:
+For detailed installation and first-time setup, see the [Quick Start Guide](#quick-start-guide) above.
+
+For module-based installation:
 ```powershell
-. '.\src\public\Get-ExpandedConfig.ps1'
+Import-Module .\dist\PSConfigResolver
 ```
 
-3. Or add to your profile for automatic loading:
+Or source the function directly:
 ```powershell
-# Add to your PowerShell profile
-. 'C:\path\to\ExpandEnvVariables\src\public\Get-ExpandedConfig.ps1'
+. '.\src\public\Get-ExpandedConfig.ps1'
 ```
 
 ## Error Handling
