@@ -296,27 +296,8 @@ function Invoke-Tests {
             Write-BuildLog "All tests passed ($($testResults.PassedCount) tests)" -Level Success
         }
 
-        # Generate detailed coverage report
-        Write-BuildLog "Generating code coverage reports..." -Level Info
-        try {
-            $coverageXmlPath = Join-Path -Path $resultsPath -ChildPath 'coverage.xml'
-            if (Test-Path -LiteralPath $coverageXmlPath) {
-                & "$ProjectRoot\Generate-CoverageReport.ps1" `
-                    -CoverageXmlPath $coverageXmlPath `
-                    -OutputPath $resultsPath `
-                    -Format All `
-                    -Threshold 80 `
-                    -IncludeUntested
-                Write-BuildLog "Code coverage reports generated" -Level Success
-            }
-            else {
-                Write-BuildLog "Coverage file not found: $coverageXmlPath" -Level Warning
-            }
-        }
-        catch {
-            Write-BuildLog "Error generating coverage report: $_" -Level Warning
-            # Don't fail build if coverage report generation fails
-        }
+        # Codecov will handle coverage report generation from coverage.xml
+        Write-BuildLog "Code coverage results available at results/coverage.xml" -Level Info
     }
     catch {
         Write-BuildLog "Test execution failed: $_" -Level Error
