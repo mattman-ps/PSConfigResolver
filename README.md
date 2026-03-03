@@ -553,6 +553,69 @@ The coverage reports can be integrated into CI/CD pipelines:
     summaryFileLocation: '$(Build.SourcesDirectory)/results/coverage.xml'
 ```
 
+## Roadmap
+
+PSConfigResolver is actively developed with enhancements planned across multiple areas. Below are the key features and improvements on our roadmap.
+
+### File Format Support
+
+- [ ] **YAML Configuration Support** - Read and expand YAML configuration files
+- [ ] **TOML Configuration Support** - Native TOML file parsing and expansion
+- [ ] **INI Configuration Support** - Classic INI file format support
+
+### Validation & Security
+
+- [x] **Security Scanning** - Automated detection of sensitive data in configurations
+- [x] **Plain-text Secret Warnings** - Built-in warnings for unencrypted credentials
+- [ ] **JSON Schema Validation** - Validate configurations against schemas
+- [ ] **Circular Reference Detection** - Prevent infinite loops in variable expansion
+- [ ] **Configuration Encryption** - Encrypt/decrypt sensitive configuration data
+
+### Performance & Optimization
+
+- [ ] **Configuration Caching** - Cache parsed configurations for improved performance
+- [ ] **Lazy Loading** - On-demand loading for large configuration files
+- [ ] **Recursive Variable Expansion** - Support nested variable references (e.g., `%PATH_%ENV%_DIR%`)
+- [ ] **Performance Benchmarking** - Built-in tools to measure expansion performance
+
+### Advanced Features
+
+- [ ] **Remote Configuration Loading** - Load configs from HTTP/S, Git repositories, and cloud storage
+- [ ] **Configuration Merge** - Combine multiple configuration files with override policies
+- [ ] **Configuration Diff** - Compare configurations and highlight differences
+- [ ] **Backup Rotation** - Automated backup with configurable retention policies
+- [ ] **Multiple Export Formats** - Export to YAML, TOML, and other formats
+
+### Module Distribution
+
+- [ ] **PowerShell Gallery v1.0** - Official publication to PowerShell Gallery
+- [ ] **Chocolatey Package** - Windows package manager distribution
+- [ ] **Cross-platform Testing** - Verified compatibility with PowerShell 7.x on Linux and macOS
+- [ ] **Module Auto-updates** - Automated dependency and version management
+
+### Developer Experience
+
+- [ ] **Enhanced Logging** - Configurable log levels (Debug, Info, Warning, Error)
+- [ ] **Diagnostic Reports** - Comprehensive diagnostics for troubleshooting
+- [ ] **Expansion Tracing** - Step-by-step variable expansion visualization
+- [ ] **Colorized Output** - Enhanced console output with color coding
+- [ ] **Progress Indicators** - Visual feedback for large file processing
+- [ ] **IntelliSense Support** - Command completion and parameter suggestions
+
+### Documentation & Community
+
+- [ ] **API Documentation** - Comprehensive function reference
+- [ ] **Contributing Guidelines** - Community contribution framework
+
+### Testing & Quality
+
+- [x] **CI Code Coverage** - Automated coverage reporting in build pipeline
+- [x] **Security Scanning** - Automated vulnerability scanning
+- [ ] **80%+ Code Coverage** - Comprehensive test suite coverage
+- [ ] **Integration Tests** - End-to-end workflow validation
+- [ ] **Performance Benchmarks** - Standardized performance testing
+- [ ] **Multi-version Testing** - Compatibility testing across PowerShell versions
+
 ## Troubleshooting
 
 ### Configuration won't load
